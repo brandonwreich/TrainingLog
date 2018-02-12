@@ -8,19 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController
+pubic class ViewController: UIViewController
 {
 
-    override func viewDidLoad()
+    override public func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning()
+    override public func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override public func viewDidAppear(_ animated: Bool)
+    {
+        self.performSegue(withIdentifier: "showLoginPage", sender: self)
     }
 
 
