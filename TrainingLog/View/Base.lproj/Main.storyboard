@@ -143,6 +143,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonClicked:" destination="bqN-WJ-ypG" eventType="touchUpInside" id="mYu-Br-777"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-nZ-liQ">
                                 <rect key="frame" x="205" y="515" width="115" height="36"/>
@@ -232,6 +235,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w4q-2e-iR2"/>
                     </view>
+                    <connections>
+                        <outlet property="RegisterButton" destination="xFC-Np-3Pt" id="BCe-tX-cyS"/>
+                        <outlet property="userConfirmPasswordTextField" destination="rFf-DV-5Tx" id="BCy-MO-a0B"/>
+                        <outlet property="userEmailTextField" destination="q3s-g9-Gm2" id="dmo-A6-9F7"/>
+                        <outlet property="userPasswordTextField" destination="qFj-cv-Cg8" id="zlj-xB-swV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8j-y9-byd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
