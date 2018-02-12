@@ -15,15 +15,17 @@ class RegisterPageViewController: UIViewController
     @IBOutlet weak var userConfirmPasswordTextField: UITextField!
     @IBOutlet weak var RegisterButton: UIButton!
     
+   // String illegalCharacters [] = {"<", ">", "(", ")", "[", "]", ";", ",",}
+    
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         // Initalize data members
-        let userEmail =  userEmailTextField.text
-        let userPassword = userPasswordTextField.text
-        let userConfirmPassword = userConfirmPasswordTextField.text
+        let userEmail =  userEmailTextField.text!
+        let userPassword = userPasswordTextField.text!
+        let userConfirmPassword = userConfirmPasswordTextField.text!
         
         // If any of the fields are empty
-        if (userEmail!.isEmpty || userPassword!.isEmpty || userConfirmPassword!.isEmpty)
+        if (userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
         {
             // Display the alert message
             displayMyAlertMessage(userMessage: "All fields are required to register")
@@ -31,8 +33,17 @@ class RegisterPageViewController: UIViewController
             return;
         }
         
+        if (!userEmail.contains("@"))
+        {
+            displayMyAlertMessage(userMessage: "Vaild email required")
+        }
+   //     else if (userEmail.contains(illegalCharacters))
+        {
+            
+        }
+        
         // If the userPassword does not match the userConfirmPassword
-        if (userPassword! != userConfirmPassword!)
+        if (userPassword != userConfirmPassword)
         {
             // Display the alert message
             displayMyAlertMessage(userMessage: "Passwords do not match")
