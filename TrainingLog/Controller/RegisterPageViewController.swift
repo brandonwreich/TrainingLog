@@ -15,17 +15,7 @@ class RegisterPageViewController: UIViewController
     @IBOutlet weak var userConfirmPasswordTextField: UITextField!
     @IBOutlet weak var RegisterButton: UIButton!
     
-    
-    
     @IBAction func registerButtonClicked(_ sender: Any)
-    {
-        checkIfAnyFieldsAreEmpty()
-    }
-    
-    /**
-     Checks to see of any of the required fields are empty
-     */
-    public func checkIfAnyFieldsAreEmpty() -> Void
     {
         // Initalize data members
         let userEmail =  userEmailTextField.text
@@ -35,36 +25,40 @@ class RegisterPageViewController: UIViewController
         // If any of the fields are empty
         if (userEmail!.isEmpty || userPassword!.isEmpty || userConfirmPassword!.isEmpty)
         {
-            // Initalize an alert that says "All fields are required to register"
-            let myAlert = UIAlertController(title: "Oops", message:"All fields are required to register", preferredStyle: UIAlertControllerStyle.alert)
+            // Display the alert message
+            displayMyAlertMessage(userMessage: "All fields are required to register")
             
-            // Adding the okay button
-            let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default)
-            
-            // Adding the alert
-            myAlert.addAction(okAction)
+            return;
         }
-    }
-    
-    public func checkIfPasswordsMatchEachOther()
-    {
-        // Initalize data members
-        let userPassword = userPasswordTextField.text
-        let userConfirmPassword = userConfirmPasswordTextField.text
         
+        // If the userPassword does not match the userConfirmPassword
         if (userPassword! != userConfirmPassword!)
         {
+            // Display the alert message
+            displayMyAlertMessage(userMessage: "Passwords do not match")
             
+            return;
         }
+        
+        //Store data
+    }
+    
+    public func displayMyAlertMessage(userMessage: String)
+    {
+        let myAlert = UIAlertController(title: "Oops", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override public func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
