@@ -40,7 +40,22 @@ class RegisterPageViewController: UIViewController
             return;
         }
         
-        //Store data
+        // Store data
+        UserDefaults.standard.set(userEmail, forKey: "userEmail")
+        UserDefaults.standard.set(userPassword, forKey: "userPassword")
+        UserDefaults.standard.synchronize();
+        
+        // Display confirmation message
+        let myAlert = UIAlertController(title: "Congradulations", message: "Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default)
+        {
+            // Dismisses the view
+            action in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     public func displayMyAlertMessage(userMessage: String)
