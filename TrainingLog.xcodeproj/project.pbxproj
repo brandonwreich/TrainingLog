@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031B851420334A0400700A52 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B851320334A0400700A52 /* LoginPageViewController.swift */; };
 		0323D0D82031F2B00013F55D /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0323D0D72031F2B00013F55D /* RegisterPageViewController.swift */; };
 		03A5C39A20162BC300561DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5C39920162BC300561DC3 /* AppDelegate.swift */; };
 		03A5C39C20162BC300561DC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5C39B20162BC300561DC3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031B851320334A0400700A52 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		0323D0D72031F2B00013F55D /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		03A5C39620162BC300561DC3 /* TrainingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A5C39920162BC300561DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 				03A5C39920162BC300561DC3 /* AppDelegate.swift */,
 				03A5C39B20162BC300561DC3 /* ViewController.swift */,
 				0323D0D72031F2B00013F55D /* RegisterPageViewController.swift */,
+				031B851320334A0400700A52 /* LoginPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A5C39C20162BC300561DC3 /* ViewController.swift in Sources */,
+				031B851420334A0400700A52 /* LoginPageViewController.swift in Sources */,
 				03A5C39A20162BC300561DC3 /* AppDelegate.swift in Sources */,
 				0323D0D82031F2B00013F55D /* RegisterPageViewController.swift in Sources */,
 			);
