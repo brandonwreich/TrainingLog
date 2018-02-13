@@ -22,11 +22,7 @@ public class ViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override public func viewDidAppear(_ animated: Bool)
-    {
-        self.performSegue(withIdentifier: "showLoginPage", sender: self)
-    }
+
 
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSd-O9-btl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,20 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNN-xe-QNc">
+                                <rect key="frame" x="164" y="311" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="wSd-O9-btl" kind="presentation" identifier="showLoginPage" id="DbM-rN-92s"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1540" y="-48"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Page View Controller-->
         <scene sceneID="sOa-3f-tql">
             <objects>
-                <viewController id="wSd-O9-btl" sceneMemberID="viewController">
+                <viewController id="wSd-O9-btl" customClass="LoginPageViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZu-ZB-MTs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +76,10 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPushed:" destination="wSd-O9-btl" eventType="touchUpInside" id="jF0-vJ-E2C"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="f71-EA-0dW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyk-eX-Xfe">
                                 <rect key="frame" x="16" y="476" width="343" height="24"/>
@@ -119,10 +128,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ctC-3j-4o5"/>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="4QJ-ox-2I6" id="j9e-uW-6Au"/>
+                        <outlet property="userEmailTextField" destination="PsQ-dA-q2f" id="DxJ-wb-zdC"/>
+                        <outlet property="userPasswordTextField" destination="dmV-Tx-lhz" id="CXv-NN-V3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqx-6s-Ta1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="117.39130434782609"/>
+            <point key="canvasLocation" x="644" y="-48"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="Ytl-cG-xbi">
@@ -244,10 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8j-y9-byd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="817.24137931034488"/>
+            <point key="canvasLocation" x="644" y="752"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1kM-ii-ygj"/>
-    </inferredMetricsTieBreakers>
 </document>
