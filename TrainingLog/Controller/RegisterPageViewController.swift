@@ -11,11 +11,11 @@ import UIKit
 class RegisterPageViewController: UIViewController
 {
     @IBOutlet weak var userEmailTextField: UITextField!
-    @IBOutlet weak var userPasswordTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField! 
     @IBOutlet weak var userConfirmPasswordTextField: UITextField!
     @IBOutlet weak var RegisterButton: UIButton!
     
-   // String illegalCharacters [] = {"<", ">", "(", ")", "[", "]", ";", ",",}
+    var illegalCharacters: [String] = ["<", ">", "(", ")", "[", "]", ";", ","]
     
     @IBAction func registerButtonClicked(_ sender: Any)
     {
@@ -29,6 +29,8 @@ class RegisterPageViewController: UIViewController
         {
             // Display the alert message
             displayMyAlertMessage(userMessage: "All fields are required to register")
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
             
             return;
         }
@@ -36,10 +38,46 @@ class RegisterPageViewController: UIViewController
         if (!userEmail.contains("@"))
         {
             displayMyAlertMessage(userMessage: "Vaild email required")
-        }
-   //     else if (userEmail.contains(illegalCharacters))
-        {
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
             
+            return;
+        }
+        else if (userEmail.contains("<") ||
+            userEmail.contains(">") ||
+            userEmail.contains("(") ||
+            userEmail.contains(")") ||
+            userEmail.contains("[") ||
+            userEmail.contains("]") ||
+            userEmail.contains(";") ||
+            userEmail.contains(",") ||
+            userEmail.contains(" "))
+        {
+            displayMyAlertMessage(userMessage: "Valid email required")
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
+            
+            return;
+        }
+        else if (userEmail.hasPrefix("_") ||
+            userEmail.hasPrefix(".") ||
+            userEmail.hasPrefix("-") ||
+            userEmail.hasPrefix("1") ||
+            userEmail.hasPrefix("2") ||
+            userEmail.hasPrefix("3") ||
+            userEmail.hasPrefix("4") ||
+            userEmail.hasPrefix("5") ||
+            userEmail.hasPrefix("6") ||
+            userEmail.hasPrefix("7") ||
+            userEmail.hasPrefix("8") ||
+            userEmail.hasPrefix("9") ||
+            userEmail.hasPrefix("0"))
+        {
+            displayMyAlertMessage(userMessage:"Valid email requird")
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
+            
+            return;
         }
         
         // If the userPassword does not match the userConfirmPassword
@@ -47,6 +85,8 @@ class RegisterPageViewController: UIViewController
         {
             // Display the alert message
             displayMyAlertMessage(userMessage: "Passwords do not match")
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
             
             return;
         }
