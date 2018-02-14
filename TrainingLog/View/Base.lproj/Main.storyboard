@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSd-O9-btl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tq3-br-mRW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -30,6 +35,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540" y="-48"/>
+        </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="ZCj-oH-cK2">
+            <objects>
+                <viewController id="Tq3-br-mRW" customClass="LaunchScreenViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyX-Gd-pbe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RunnerSelf" translatesAutoresizingMaskIntoConstraints="NO" id="29d-CZ-oV7">
+                                <rect key="frame" x="37" y="183.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Oe2-u9-TgX"/>
+                                    <constraint firstAttribute="width" constant="300" id="p2x-7Y-3u6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training       Junkies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-lI-Zec">
+                                <rect key="frame" x="21" y="289" width="333" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="QuE-0d-ex0"/>
+                                    <constraint firstAttribute="width" constant="333" id="eUr-ZP-mf3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8b1-lI-Zec" firstAttribute="centerX" secondItem="dyX-Gd-pbe" secondAttribute="centerX" id="3Vu-uF-7q7"/>
+                            <constraint firstItem="29d-CZ-oV7" firstAttribute="centerY" secondItem="dyX-Gd-pbe" secondAttribute="centerY" id="CEn-WF-IEp"/>
+                            <constraint firstItem="29d-CZ-oV7" firstAttribute="centerY" secondItem="dyX-Gd-pbe" secondAttribute="centerY" id="RJ8-rF-MN5"/>
+                            <constraint firstItem="29d-CZ-oV7" firstAttribute="centerX" secondItem="dyX-Gd-pbe" secondAttribute="centerX" id="UIn-4q-2m3"/>
+                            <constraint firstItem="29d-CZ-oV7" firstAttribute="centerX" secondItem="dyX-Gd-pbe" secondAttribute="centerX" id="WW0-zS-CvS"/>
+                            <constraint firstItem="8b1-lI-Zec" firstAttribute="centerY" secondItem="dyX-Gd-pbe" secondAttribute="centerY" id="eHf-Mq-J3b"/>
+                            <constraint firstItem="8b1-lI-Zec" firstAttribute="centerY" secondItem="dyX-Gd-pbe" secondAttribute="centerY" id="lwz-4l-tK8"/>
+                            <constraint firstItem="8b1-lI-Zec" firstAttribute="centerX" secondItem="dyX-Gd-pbe" secondAttribute="centerX" id="rb4-Sd-txx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GDo-SF-8ot"/>
+                    </view>
+                    <connections>
+                        <segue destination="wSd-O9-btl" kind="presentation" identifier="showApp" id="BaP-SX-f0T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecW-Oq-cUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-48"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="sOa-3f-tql">
@@ -261,4 +313,10 @@
             <point key="canvasLocation" x="644" y="752"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RunnerSelf" width="1200" height="1200"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BaP-SX-f0T"/>
+    </inferredMetricsTieBreakers>
 </document>
