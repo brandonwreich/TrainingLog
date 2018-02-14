@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ctC-3j-4o5" firstAttribute="trailing" secondItem="lUZ-KU-dTv" secondAttribute="trailing" constant="16" id="5dJ-Dk-pWR"/>
                             <constraint firstItem="qyk-eX-Xfe" firstAttribute="top" secondItem="4QJ-ox-2I6" secondAttribute="bottom" constant="8" id="7G1-f7-NbD"/>
@@ -271,7 +271,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="w4q-2e-iR2" firstAttribute="trailing" secondItem="M81-o6-A19" secondAttribute="trailing" constant="16" id="2j2-3U-VFa"/>
                             <constraint firstItem="Hkq-nZ-liQ" firstAttribute="top" secondItem="rFf-DV-5Tx" secondAttribute="bottom" constant="89" id="3L9-4H-XB9"/>
@@ -317,6 +317,6 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BaP-SX-f0T"/>
+        <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>
 </document>
