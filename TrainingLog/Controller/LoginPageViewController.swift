@@ -14,6 +14,11 @@ class LoginPageViewController: UIViewController
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
     
+    /**
+     When the login button is pushed it checks to see if your email and password match
+     the ones that are stored using UserDefaults. If not you get the error message 'Username/Password
+     do not match. If they do match you are successfully logged in.
+ */
     @IBAction func loginButtonPushed(_ sender: Any)
     {
         let userEmail = userEmailTextField.text!
@@ -37,6 +42,8 @@ class LoginPageViewController: UIViewController
             {
                 // Displays the error message and sets the password text field to empty
                 displayMyAlertMessage(userMessage: "Email and/or password is incorrect")
+                
+                // Set the password field to empty
                 userPasswordTextField.text = ""
             }
         }
@@ -45,6 +52,8 @@ class LoginPageViewController: UIViewController
         {
             // Displays the error message and sets the password text field to empty
             displayMyAlertMessage(userMessage: "Email and/or password is incorrect")
+            
+            // Set the password field to empty
             userPasswordTextField.text = ""
         }
     }
