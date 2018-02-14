@@ -32,6 +32,7 @@ class RegisterPageViewController: UIViewController
         let userEmail =  userEmailTextField.text!
         let userPassword = userPasswordTextField.text!
         let userConfirmPassword = userConfirmPasswordTextField.text!
+        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         
         // If any of the fields are empty
         if (userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
@@ -92,7 +93,20 @@ class RegisterPageViewController: UIViewController
             userEmail.hasPrefix("0"))
         {
             // Display alert message 'Valid email required'
-            displayMyAlertMessage(userMessage:"Valid email requird")
+            displayMyAlertMessage(userMessage: "Valid email requird")
+            
+            // Set the password fields to empty
+            userPasswordTextField.text = ""
+            userConfirmPasswordTextField.text = ""
+            
+            return;
+        }
+        
+        // Check to see if this email alread exsists
+        if( userEmail == userEmailStored)
+        {
+            // Display alert message 'Email already exsits'
+            displayMyAlertMessage(userMessage: "This email already exists")
             
             // Set the password fields to empty
             userPasswordTextField.text = ""
@@ -163,6 +177,10 @@ class RegisterPageViewController: UIViewController
         self.present(myAlert, animated: true, completion: nil)
     }
     
+    /**
+     This method creates an alert to display every time one of the crietera is not met in registerButtonClicked.
+     It takes a string as a parameter so you can type in the message you want.
+ */
     public func displayMyAlertMessage(userMessage: String)
     {
         let myAlert = UIAlertController(title: "Oops", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
