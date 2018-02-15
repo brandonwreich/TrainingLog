@@ -51,18 +51,18 @@
                                     <constraint firstAttribute="width" constant="300" id="p2x-7Y-3u6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training       Junkies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-lI-Zec">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training       Junkies" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-lI-Zec">
                                 <rect key="frame" x="21" y="289" width="333" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="QuE-0d-ex0"/>
-                                    <constraint firstAttribute="width" constant="333" id="eUr-ZP-mf3"/>
+                                    <constraint firstAttribute="width" constant="333" id="UHj-HS-wvC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8b1-lI-Zec" firstAttribute="centerX" secondItem="dyX-Gd-pbe" secondAttribute="centerX" id="3Vu-uF-7q7"/>
                             <constraint firstItem="29d-CZ-oV7" firstAttribute="centerY" secondItem="dyX-Gd-pbe" secondAttribute="centerY" id="CEn-WF-IEp"/>
@@ -126,11 +126,11 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPushed:" destination="wSd-O9-btl" eventType="touchUpInside" id="jF0-vJ-E2C"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="f71-EA-0dW"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="showPage" id="f71-EA-0dW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyk-eX-Xfe">
@@ -144,14 +144,14 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="bqN-WJ-ypG" kind="presentation" identifier="showRegisterPage" id="g9I-hL-35V"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ctC-3j-4o5" firstAttribute="trailing" secondItem="lUZ-KU-dTv" secondAttribute="trailing" constant="16" id="5dJ-Dk-pWR"/>
                             <constraint firstItem="qyk-eX-Xfe" firstAttribute="top" secondItem="4QJ-ox-2I6" secondAttribute="bottom" constant="8" id="7G1-f7-NbD"/>
@@ -271,7 +271,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="w4q-2e-iR2" firstAttribute="trailing" secondItem="M81-o6-A19" secondAttribute="trailing" constant="16" id="2j2-3U-VFa"/>
                             <constraint firstItem="Hkq-nZ-liQ" firstAttribute="top" secondItem="rFf-DV-5Tx" secondAttribute="bottom" constant="89" id="3L9-4H-XB9"/>
@@ -317,6 +317,6 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1kM-ii-ygj"/>
+        <segue reference="BaP-SX-f0T"/>
     </inferredMetricsTieBreakers>
 </document>

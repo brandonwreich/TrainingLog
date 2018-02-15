@@ -35,7 +35,7 @@ class LoginPageViewController: UIViewController
                 // Login is succesful
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
                 UserDefaults.standard.synchronize()
-                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "showPage", sender: self)
             }
             // If the password doesn't match
             else
