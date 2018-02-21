@@ -16,10 +16,10 @@ class InputDataViewController: UIViewController
     @IBOutlet weak var paceTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
     
-    let distanceTextField = distance
-    let timeTextField = time
-    let paceTextField = pace
-    let descriptionTextField = description
+//    let distanceTextField = distance
+//    let timeTextField = time
+//    let paceTextField = pace
+//    let descriptionTextField = description
     
     
     
