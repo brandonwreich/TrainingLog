@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterPageViewController: UIViewController
+public class RegisterPageViewController: UIViewController
 {
     // Storyboard outlets
     @IBOutlet weak var userEmailTextField: UITextField!
@@ -195,11 +195,5 @@ class RegisterPageViewController: UIViewController
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-    }
-    
-    override public func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
