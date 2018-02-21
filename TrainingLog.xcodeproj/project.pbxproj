@@ -15,6 +15,7 @@
 		03A5C39F20162BC300561DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C39D20162BC300561DC3 /* Main.storyboard */; };
 		03A5C3A120162BC300561DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C3A020162BC300561DC3 /* Assets.xcassets */; };
 		03A5C3A420162BC300561DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C3A220162BC300561DC3 /* LaunchScreen.storyboard */; };
+		03CCBF74203DB38200AA2778 /* InputDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCBF73203DB38200AA2778 /* InputDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		03A5C3A020162BC300561DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A5C3A320162BC300561DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A5C3A520162BC300561DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03CCBF73203DB38200AA2778 /* InputDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				031B851320334A0400700A52 /* LoginPageViewController.swift */,
 				0323D0D72031F2B00013F55D /* RegisterPageViewController.swift */,
 				03A5C39B20162BC300561DC3 /* ViewController.swift */,
+				03CCBF73203DB38200AA2778 /* InputDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				03A5C39A20162BC300561DC3 /* AppDelegate.swift in Sources */,
 				0300AE672034944100DF9DE6 /* LaunchScreenViewController.swift in Sources */,
 				0323D0D82031F2B00013F55D /* RegisterPageViewController.swift in Sources */,
+				03CCBF74203DB38200AA2778 /* InputDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
