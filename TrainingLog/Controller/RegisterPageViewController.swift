@@ -25,7 +25,7 @@ public class RegisterPageViewController: UIViewController
      characters and a number. Next it checks to see if the userPassword field and the userConfirmPassword field
      match, if not you get an error message. If all of those tests are passed the email and password are stored
      using UserDefaults and you get a confirmation message showing you have successfully registered.
- */
+     */
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         // Initalize data members
@@ -37,7 +37,7 @@ public class RegisterPageViewController: UIViewController
         // If any of the fields are empty
         if (userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
         {
-            // Display the alert message
+            // Display the alert message "All fields are required"
             displayMyAlertMessage(userMessage: "All fields are required to register")
             userPasswordTextField.text = ""
             userConfirmPasswordTextField.text = ""
@@ -48,7 +48,7 @@ public class RegisterPageViewController: UIViewController
         // If the email contains a '@'
         if (!userEmail.contains("@"))
         {
-            // Display alert message 'Valid email required'
+            // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Vaild email required")
             
             // Set the password fields to empty
@@ -57,7 +57,7 @@ public class RegisterPageViewController: UIViewController
             
             return;
         }
-        // If the email contains any illegal characters
+            // If the email contains any illegal characters
         else if (userEmail.contains("<") ||
             userEmail.contains(">") ||
             userEmail.contains("(") ||
@@ -68,7 +68,7 @@ public class RegisterPageViewController: UIViewController
             userEmail.contains(",") ||
             userEmail.contains(" "))
         {
-            // Display alert message 'Valid email required'
+            // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Valid email required")
             
             // Set the password fields to empty
@@ -77,7 +77,7 @@ public class RegisterPageViewController: UIViewController
             
             return;
         }
-        // If the email starts with a number, hyphen, period, or underscore
+            // If the email starts with a number, hyphen, period, or underscore
         else if (userEmail.hasPrefix("_") ||
             userEmail.hasPrefix(".") ||
             userEmail.hasPrefix("-") ||
@@ -92,7 +92,7 @@ public class RegisterPageViewController: UIViewController
             userEmail.hasPrefix("9") ||
             userEmail.hasPrefix("0"))
         {
-            // Display alert message 'Valid email required'
+            // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Valid email requird")
             
             // Set the password fields to empty
@@ -125,8 +125,9 @@ public class RegisterPageViewController: UIViewController
             userPasswordTextField.text = ""
             userConfirmPasswordTextField.text = ""
             
+            return;
         }
-        // If the password does NOT contain a number
+            // If the password does NOT contain a number
         else if(!userPassword.contains("0") ||
             !userPassword.contains("1") ||
             !userPassword.contains("2") ||
@@ -173,6 +174,7 @@ public class RegisterPageViewController: UIViewController
             self.dismiss(animated: true, completion: nil)
         }
         
+        // Add the action to the alert and present it
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }
@@ -180,12 +182,14 @@ public class RegisterPageViewController: UIViewController
     /**
      This method creates an alert to display every time one of the crietera is not met in registerButtonClicked.
      It takes a string as a parameter so you can type in the message you want.
- */
+     */
     public func displayMyAlertMessage(userMessage: String)
     {
+        // Initalize data members
         let myAlert = UIAlertController(title: "Oops", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil)
         
+        // Add the action to the alert and present it
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }
@@ -193,7 +197,5 @@ public class RegisterPageViewController: UIViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
 }

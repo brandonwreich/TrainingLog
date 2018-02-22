@@ -10,6 +10,7 @@ import UIKit
 
 public class InputDataViewController: UIViewController
 {
+    // Storyboard outlets
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var paceTextField: UITextField!
@@ -18,36 +19,67 @@ public class InputDataViewController: UIViewController
     @IBOutlet weak var convertToMilesButton: UIButton!
     @IBOutlet weak var convertToKilometersButton: UIButton!
     
+    /**
+     This method takes the numbers inthe distanceTextField and turns it into a double and
+     stores it in the variable distance. If it can't be turned into a double it will
+     send an error message. It then takes distance and mulitplies it by the conversion
+     number. The new number is then put into the distanceTextField.
+     */
     @IBAction func convertToMiles(_ sender: Any)
     {
+        // Initalize data members
         let conversion = 0.62137
         var convertedNumber = 0.00
+        
+        // If the distance can be turned into a double
         if let distance = Double(distanceTextField.text!)
         {
+            // Calculate Km to Mi
             convertedNumber += (distance * conversion)
         }
+        // If the distnace can't be turned into a double
         else
         {
+            // Display alert message "Valid number required"
             displayMyAlertMessage(userMessage: "Valid number required")
         }
         
+        // Set the textField to the new number
         distanceTextField.text = String(round(1000*convertedNumber)/1000)
     }
     
+    /**
+     This method takes the numbers inthe distanceTextField and turns it into a double and
+     stores it in the variable distance. If it can't be turned into a double it will
+     send an error message. It then takes distance and mulitplies it by the conversion
+     number. The new number is then put into the distanceTextField.
+     */
     @IBAction func convertToKilometers(_ sender: Any)
     {
+        // Initalize data members
         let conversion = 0.62137
         var convertedNumber = 0.00
+        
+        // If the distance can be turned into a double
         if let distance = Double(distanceTextField.text!)
         {
+            // Calculate Mi to Km
             convertedNumber += (distance / conversion)
         }
+        // If the distance can't be turned into a double
         else
         {
+            // Display alert message "Valid number required"
             displayMyAlertMessage(userMessage: "Valid number required")
         }
         
+        // Set the textField to the new number
         distanceTextField.text = String(round(1000*convertedNumber)/1000)
+    }
+    
+    public func calculatePace() -> Void
+    {
+        
     }
     
     @IBAction func saveData(_ sender: Any)
@@ -58,11 +90,17 @@ public class InputDataViewController: UIViewController
         let description = descriptionTextField.text!
     }
     
+    /**
+     This method creates an alert to display every time one of the crietera is not met in registerButtonClicked.
+     It takes a string as a parameter so you can type in the message you want.
+     */
     public func displayMyAlertMessage(userMessage: String)
     {
+        // Initalize data members
         let myAlert = UIAlertController(title: "Oops", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil)
         
+        // Add the action to the alert and present it
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }
@@ -70,25 +108,10 @@ public class InputDataViewController: UIViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override public func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
