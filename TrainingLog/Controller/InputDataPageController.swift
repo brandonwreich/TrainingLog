@@ -84,10 +84,10 @@ public class InputDataPageController: UIViewController
     
     @IBAction func saveData(_ sender: Any)
     {
-        let distance = distanceTextField.text!
-        let time = timeTextField.text!
-        let pace = paceTextField.text!
-        let description = descriptionTextField.text!
+//        let distance = distanceTextField.text!
+//        let time = timeTextField.text!
+//        let pace = paceTextField.text!
+//        let description = descriptionTextField.text!
     }
     
     /**
