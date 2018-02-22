@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ViewController: UIViewController
+public class FeedPageController: UIViewController
 {
     override public func viewDidLoad()
     {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class InputDataViewController: UIViewController
+public class InputDataPageController: UIViewController
 {
     // Storyboard outlets
     @IBOutlet weak var distanceTextField: UITextField!

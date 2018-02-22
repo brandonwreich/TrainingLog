@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LaunchScreenViewController: UIViewController
+public class LaunchScreenController: UIViewController
 {
     /**
      This method shows the launch screen for 4 seonds and then performs the segue to

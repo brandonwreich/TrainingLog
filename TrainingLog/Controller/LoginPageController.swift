@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoginPageViewController: UIViewController
+public class LoginPageController: UIViewController
 {
     // Storyboard Outlets
     @IBOutlet weak var userEmailTextField: UITextField!

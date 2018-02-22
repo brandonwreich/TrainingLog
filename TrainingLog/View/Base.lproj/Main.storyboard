@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Feed Page Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FeedPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1540" y="-48"/>
         </scene>
-        <!--Input Data View Controller-->
+        <!--Input Data Page Controller-->
         <scene sceneID="ipD-Qn-55f">
             <objects>
-                <viewController id="V4K-QX-6gl" customClass="InputDataViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V4K-QX-6gl" customClass="InputDataPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hK-X5-3J7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="2358.5" y="-48.5"/>
         </scene>
-        <!--Launch Screen View Controller-->
+        <!--Launch Screen Controller-->
         <scene sceneID="ZCj-oH-cK2">
             <objects>
-                <viewController id="Tq3-br-mRW" customClass="LaunchScreenViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tq3-br-mRW" customClass="LaunchScreenController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyX-Gd-pbe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="-129" y="-48"/>
         </scene>
-        <!--Login Page View Controller-->
+        <!--Login Page Controller-->
         <scene sceneID="sOa-3f-tql">
             <objects>
-                <viewController id="wSd-O9-btl" customClass="LoginPageViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wSd-O9-btl" customClass="LoginPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZu-ZB-MTs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="-48"/>
         </scene>
-        <!--Register Page View Controller-->
+        <!--Register Page Controller-->
         <scene sceneID="Ytl-cG-xbi">
             <objects>
-                <viewController id="bqN-WJ-ypG" customClass="RegisterPageViewController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bqN-WJ-ypG" customClass="RegisterPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j1f-sW-6CR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

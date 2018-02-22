@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class RegisterPageViewController: UIViewController
+public class RegisterPageController: UIViewController
 {
     // Storyboard outlets
     @IBOutlet weak var userEmailTextField: UITextField!
