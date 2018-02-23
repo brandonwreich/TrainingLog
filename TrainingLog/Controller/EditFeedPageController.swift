@@ -8,16 +8,12 @@
 
 import UIKit
 
-public class FeedPageController: UIViewController
+public class EditFeedPageController: UITableViewController
 {
+    
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-    }
-
-    override public func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
 }
 

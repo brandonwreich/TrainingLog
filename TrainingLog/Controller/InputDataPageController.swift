@@ -84,10 +84,21 @@ public class InputDataPageController: UIViewController
     
     @IBAction func saveData(_ sender: Any)
     {
-//        let distance = distanceTextField.text!
-//        let time = timeTextField.text!
-//        let pace = paceTextField.text!
-//        let description = descriptionTextField.text!
+        let distance = distanceTextField.text!
+        let time = timeTextField.text!
+        let pace = paceTextField.text!
+        let description = descriptionTextField.text!
+        let path = "data.txt"
+        let contents = distance + time + pace + description
+        
+        do
+        {
+            try contents.write(toFile: path, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError
+        {
+            displayMyAlertMessage(userMessage: "Something went wrong: \(error)")
+        }
     }
     
     /**

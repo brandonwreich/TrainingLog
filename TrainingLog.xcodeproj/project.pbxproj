@@ -10,8 +10,9 @@
 		0300AE672034944100DF9DE6 /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0300AE662034944100DF9DE6 /* LaunchScreenController.swift */; };
 		031B851420334A0400700A52 /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B851320334A0400700A52 /* LoginPageController.swift */; };
 		0323D0D82031F2B00013F55D /* RegisterPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0323D0D72031F2B00013F55D /* RegisterPageController.swift */; };
+		0324F32220406AB400E4C038 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324F32120406AB400E4C038 /* FeedCell.swift */; };
 		03A5C39A20162BC300561DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5C39920162BC300561DC3 /* AppDelegate.swift */; };
-		03A5C39C20162BC300561DC3 /* FeedPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5C39B20162BC300561DC3 /* FeedPageController.swift */; };
+		03A5C39C20162BC300561DC3 /* EditFeedPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */; };
 		03A5C39F20162BC300561DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C39D20162BC300561DC3 /* Main.storyboard */; };
 		03A5C3A120162BC300561DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C3A020162BC300561DC3 /* Assets.xcassets */; };
 		03A5C3A420162BC300561DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5C3A220162BC300561DC3 /* LaunchScreen.storyboard */; };
@@ -22,9 +23,10 @@
 		0300AE662034944100DF9DE6 /* LaunchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		031B851320334A0400700A52 /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		0323D0D72031F2B00013F55D /* RegisterPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageController.swift; sourceTree = "<group>"; };
+		0324F32120406AB400E4C038 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		03A5C39620162BC300561DC3 /* TrainingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A5C39920162BC300561DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03A5C39B20162BC300561DC3 /* FeedPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPageController.swift; sourceTree = "<group>"; };
+		03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFeedPageController.swift; sourceTree = "<group>"; };
 		03A5C39E20162BC300561DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03A5C3A020162BC300561DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A5C3A320162BC300561DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,8 +52,9 @@
 				0300AE662034944100DF9DE6 /* LaunchScreenController.swift */,
 				031B851320334A0400700A52 /* LoginPageController.swift */,
 				0323D0D72031F2B00013F55D /* RegisterPageController.swift */,
-				03A5C39B20162BC300561DC3 /* FeedPageController.swift */,
+				03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */,
 				03CCBF73203DB38200AA2778 /* InputDataPageController.swift */,
+				0324F32120406AB400E4C038 /* FeedCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,7 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A5C39C20162BC300561DC3 /* FeedPageController.swift in Sources */,
+				0324F32220406AB400E4C038 /* FeedCell.swift in Sources */,
+				03A5C39C20162BC300561DC3 /* EditFeedPageController.swift in Sources */,
 				031B851420334A0400700A52 /* LoginPageController.swift in Sources */,
 				03A5C39A20162BC300561DC3 /* AppDelegate.swift in Sources */,
 				0300AE672034944100DF9DE6 /* LaunchScreenController.swift in Sources */,
