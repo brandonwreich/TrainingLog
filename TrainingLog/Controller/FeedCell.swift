@@ -14,5 +14,4 @@ class FeedCell: UITableViewCell
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
-    
 }

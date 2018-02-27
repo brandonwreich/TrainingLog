@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 public class InputDataPageController: UIViewController
 {
@@ -18,6 +19,10 @@ public class InputDataPageController: UIViewController
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var convertToMilesButton: UIButton!
     @IBOutlet weak var convertToKilometersButton: UIButton!
+    
+    // Initalize data members
+    var dataArr = [Data]()
+    var data: Data!
     
     /**
      This method takes the numbers inthe distanceTextField and turns it into a double and
@@ -87,17 +92,22 @@ public class InputDataPageController: UIViewController
         let distance = distanceTextField.text!
         let time = timeTextField.text!
         let pace = paceTextField.text!
-        let description = descriptionTextField.text!
-        let path = "data.txt"
-        let contents = distance + time + pace + description
+       // let date = dateTextField.text!
         
+        let fileName = "data"
+        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+        
+        print("File Path: \(fileURL.path)")
+        
+        let writeString = "\(distance), \(time), \(pace)"
         do
         {
-            try contents.write(toFile: path, atomically: false, encoding: String.Encoding.utf8)
+            try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
         }
         catch let error as NSError
         {
-            displayMyAlertMessage(userMessage: "Something went wrong: \(error)")
+            displayMyAlertMessage(userMessage: "Failed to write: \(error)")
         }
     }
     
@@ -119,6 +129,9 @@ public class InputDataPageController: UIViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        data = Data()
+        
     }
     
     override public func didReceiveMemoryWarning()

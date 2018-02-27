@@ -88,6 +88,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveData:" destination="V4K-QX-6gl" eventType="touchUpInside" id="bbV-4G-STJ"/>
+                                    <segue destination="6Ad-U3-OP9" kind="presentation" id="lEJ-7r-TV5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-DK-A2v">
@@ -348,7 +349,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPushed:" destination="wSd-O9-btl" eventType="touchUpInside" id="jF0-vJ-E2C"/>
-                                    <segue destination="6Ad-U3-OP9" kind="presentation" id="UG3-83-0Vf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyk-eX-Xfe">
@@ -402,6 +402,7 @@
                         <outlet property="LoginButton" destination="4QJ-ox-2I6" id="j9e-uW-6Au"/>
                         <outlet property="userEmailTextField" destination="PsQ-dA-q2f" id="DxJ-wb-zdC"/>
                         <outlet property="userPasswordTextField" destination="dmV-Tx-lhz" id="CXv-NN-V3l"/>
+                        <segue destination="V4K-QX-6gl" kind="presentation" identifier="showPage" id="6T8-eV-TP3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqx-6s-Ta1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -595,7 +596,6 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g9I-hL-35V"/>
         <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>
 </document>
