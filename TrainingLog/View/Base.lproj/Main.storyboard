@@ -51,6 +51,9 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tn6-rV-Wnv">
                                 <rect key="frame" x="110" y="172" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Brc-Da-CNC"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
@@ -245,8 +248,10 @@
                     <connections>
                         <outlet property="convertToKilometersButton" destination="Hoo-rs-Jxo" id="1B2-68-2cT"/>
                         <outlet property="convertToMilesButton" destination="8vr-oM-sgi" id="gt5-aU-eb2"/>
+                        <outlet property="dateTextField" destination="iP5-Mu-o3d" id="z2g-qT-OhK"/>
                         <outlet property="descriptionTextField" destination="1cd-nO-aEs" id="DgM-35-LHW"/>
                         <outlet property="distanceTextField" destination="tn6-rV-Wnv" id="H42-Vj-K4Q"/>
+                        <outlet property="nameTextField" destination="Iym-cW-VHj" id="aK2-2f-y3k"/>
                         <outlet property="paceTextField" destination="pP5-i1-enF" id="Jld-u3-JYD"/>
                         <outlet property="saveButton" destination="aNo-HN-Cao" id="ACq-6L-gSN"/>
                         <outlet property="timeTextField" destination="Wc4-Fb-z66" id="DFR-JN-kRS"/>

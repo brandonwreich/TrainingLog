@@ -12,17 +12,15 @@ import Foundation
 public class InputDataPageController: UIViewController
 {
     // Storyboard outlets
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var paceTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var convertToMilesButton: UIButton!
     @IBOutlet weak var convertToKilometersButton: UIButton!
-    
-    // Initalize data members
-    var dataArr = [Data]()
-    var data: Data!
     
     /**
      This method takes the numbers inthe distanceTextField and turns it into a double and
@@ -79,7 +77,7 @@ public class InputDataPageController: UIViewController
         }
         
         // Set the textField to the new number
-        distanceTextField.text = String(round(1000*convertedNumber)/1000)
+        distanceTextField.text = String(round(1000 * convertedNumber) / 1000)
     }
     
     public func calculatePace() -> Void
@@ -89,25 +87,27 @@ public class InputDataPageController: UIViewController
     
     @IBAction func saveData(_ sender: Any)
     {
+        let name = nameTextField.text!
         let distance = distanceTextField.text!
         let time = timeTextField.text!
         let pace = paceTextField.text!
-       // let date = dateTextField.text!
+        let date = dateTextField.text!
+        let description = descriptionTextField.text!
         
         let fileName = "data"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+        let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("json")
+        print("FilePath: \(fileURL.path)")
         
-        print("File Path: \(fileURL.path)")
+        let writeString = "\(name),\(distance), \(time), \(pace), \(date), \(description)"
         
-        let writeString = "\(distance), \(time), \(pace)"
         do
         {
             try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
         }
         catch let error as NSError
         {
-            displayMyAlertMessage(userMessage: "Failed to write: \(error)")
+            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
     }
     
@@ -128,10 +128,7 @@ public class InputDataPageController: UIViewController
     
     override public func viewDidLoad()
     {
-        super.viewDidLoad()
-        
-        data = Data()
-        
+        super.viewDidLoad()        
     }
     
     override public func didReceiveMemoryWarning()
