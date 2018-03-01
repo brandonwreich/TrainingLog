@@ -14,16 +14,18 @@ public class InputDataPageController: UIViewController
     // Storyboard outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var distanceTextField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var minTextField: UITextField!
+    @IBOutlet weak var secTextField: UITextField!
     @IBOutlet weak var paceTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var convertToMilesButton: UIButton!
     @IBOutlet weak var convertToKilometersButton: UIButton!
+    @IBOutlet weak var calculatePaceButton: UIButton!
     
     /**
-     This method takes the numbers inthe distanceTextField and turns it into a double and
+     This method takes the numbers in the distanceTextField and turns it into a double and
      stores it in the variable distance. If it can't be turned into a double it will
      send an error message. It then takes distance and mulitplies it by the conversion
      number. The new number is then put into the distanceTextField.
@@ -40,7 +42,7 @@ public class InputDataPageController: UIViewController
             // Calculate Km to Mi
             convertedNumber += (distance * conversion)
         }
-        // If the distnace can't be turned into a double
+            // If the distnace can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -52,7 +54,7 @@ public class InputDataPageController: UIViewController
     }
     
     /**
-     This method takes the numbers inthe distanceTextField and turns it into a double and
+     This method takes the numbers in the distanceTextField and turns it into a double and
      stores it in the variable distance. If it can't be turned into a double it will
      send an error message. It then takes distance and mulitplies it by the conversion
      number. The new number is then put into the distanceTextField.
@@ -69,7 +71,7 @@ public class InputDataPageController: UIViewController
             // Calculate Mi to Km
             convertedNumber += (distance / conversion)
         }
-        // If the distance can't be turned into a double
+            // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -80,16 +82,35 @@ public class InputDataPageController: UIViewController
         distanceTextField.text = String(round(1000 * convertedNumber) / 1000)
     }
     
-    public func calculatePace() -> Void
+    @IBAction func calculatePace(_ sender: Any)
     {
+        // Initialize data members
+        let minutes = minTextField.text!
+        let seconds = secTextField.text!
+        let distance = distanceTextField.text!
         
+        // Calculate the pace
+        let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
+        let roundedPaceMinutes = Double(round(paceMinutes))
+        let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
+        let intPaceMinutes = Int(round(roundedPaceMinutes))
+        let paceSeconds = Int(round(decimalPaceSeconds * 60))
+        let paceSecondsZero = String(format: "%02", paceSeconds)
+        
+        // Set the paceTextField with the pace
+        paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
+    }
+    
+    public func paceCalculator(minutes : Double, seconds: Double, distance: Double) -> Double
+    {
+        return ((minutes * 60) + seconds) / distance
     }
     
     @IBAction func saveData(_ sender: Any)
     {
         let name = nameTextField.text!
         let distance = distanceTextField.text!
-        let time = timeTextField.text!
+        let time = minTextField.text! + ":" + secTextField.text!
         let pace = paceTextField.text!
         let date = dateTextField.text!
         let description = descriptionTextField.text!
