@@ -95,7 +95,7 @@ public class InputDataPageController: UIViewController
         let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
         let intPaceMinutes = Int(round(roundedPaceMinutes))
         let paceSeconds = Int(round(decimalPaceSeconds * 60))
-        let paceSecondsZero = String(format: "%02", paceSeconds)
+        let paceSecondsZero = String(format: "%02d", paceSeconds)
         
         // Set the paceTextField with the pace
         paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
