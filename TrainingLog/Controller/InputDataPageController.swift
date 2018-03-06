@@ -42,7 +42,7 @@ public class InputDataPageController: UIViewController
             // Calculate Km to Mi
             convertedNumber += (distance * conversion)
         }
-            // If the distnace can't be turned into a double
+            // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -50,7 +50,7 @@ public class InputDataPageController: UIViewController
         }
         
         // Set the textField to the new number
-        distanceTextField.text = String(round(1000*convertedNumber)/1000)
+        distanceTextField.text = String(round(1000 * convertedNumber) / 1000)
     }
     
     /**
@@ -115,20 +115,20 @@ public class InputDataPageController: UIViewController
         let date = dateTextField.text!
         let description = descriptionTextField.text!
         
-        let fileName = "data"
-        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("json")
-        print("FilePath: \(fileURL.path)")
-        
+        let file = "data.txt"
         let writeString = "\(name),\(distance), \(time), \(pace), \(date), \(description)"
         
-        do
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         {
-            try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        }
-        catch let error as NSError
-        {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+            let fileURL = dir.appendingPathComponent(file)
+            do
+            {
+                try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+            }
+            catch let error as NSError
+            {
+                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+            }
         }
     }
     

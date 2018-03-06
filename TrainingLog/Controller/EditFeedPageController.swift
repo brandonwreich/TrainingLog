@@ -8,8 +8,8 @@
 
 import UIKit
 
-//public class EditFeedPageController: UITableViewController
-//{
+public class EditFeedPageController: UITableViewController
+{
 //    lazy var runningData : [runData] =
 //        {
 //            return loadRunningDataFromFile()
@@ -24,7 +24,7 @@ import UIKit
 //    
 //    override public func numberOfSections(in tableView: UITableView) -> Int
 //    {
-//        return 2
+//        return 1
 //    }
 //    
 //    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -45,5 +45,6 @@ import UIKit
 //    {
 //        super.viewDidLoad()
 //    }
-//}
-//
+}
+
+
