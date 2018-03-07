@@ -106,7 +106,9 @@ public class InputDataPageController: UIViewController
         return ((minutes * 60) + seconds) / distance
     }
     
-    
+    /**
+ 
+ */
     @IBAction func saveData(_ sender: Any)
     {
         // Initalize data members
@@ -121,19 +123,24 @@ public class InputDataPageController: UIViewController
         let file = "data.txt"
         let writeString = "\(name), \(distance), \(time), \(pace), \(date), \(description)"
         
+        
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         {
             let fileURL = dir.appendingPathComponent(file)
             
-                do
-                {
-                    try writeString.write(toFile: file, atomically: false, encoding: String.Encoding.utf8)
-                    print(fileURL)
-                }
-                catch let error as NSError
-                {
-                    print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-                }
+            // Try to write the string
+            do
+            {
+                // Write to file
+                try writeString.write(toFile: file, atomically: false, encoding: String.Encoding.utf8)
+                print(fileURL)
+            }
+            // Catch any errors
+            catch let error as NSError
+            {
+                // Print the errors
+                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+            }
         }
     }
     
