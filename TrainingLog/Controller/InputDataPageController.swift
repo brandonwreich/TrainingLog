@@ -82,6 +82,9 @@ public class InputDataPageController: UIViewController
         distanceTextField.text = String(round(1000 * convertedNumber) / 1000)
     }
     
+    /**
+     This method helps calculate the pace and sets the pace text field to that calculated pace
+     */
     @IBAction func calculatePace(_ sender: Any)
     {
         // Initialize data members
@@ -101,14 +104,19 @@ public class InputDataPageController: UIViewController
         paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
     }
     
+    /**
+     This method takes the minutes, seconds, and distance as doubles and multiplies the minutes by 60, adds it to
+     the seconds, and divids it by the distance inputed.
+     */
     public func paceCalculator(minutes : Double, seconds: Double, distance: Double) -> Double
     {
+        // Actually calculates the pace
         return ((minutes * 60) + seconds) / distance
     }
     
     /**
- 
- */
+     
+     */
     @IBAction func saveData(_ sender: Any)
     {
         // Initalize data members
@@ -135,7 +143,7 @@ public class InputDataPageController: UIViewController
                 try writeString.write(toFile: file, atomically: false, encoding: String.Encoding.utf8)
                 print(fileURL)
             }
-            // Catch any errors
+                // Catch any errors
             catch let error as NSError
             {
                 // Print the errors
