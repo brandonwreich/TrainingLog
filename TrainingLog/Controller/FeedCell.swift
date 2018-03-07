@@ -15,35 +15,35 @@ class FeedCell: UITableViewCell
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-//    var runData : RunData!
-//    {
-//        didSet
-//        {
-//            updateCellView()
-//        }
-//    }
-//    
-//    private func updateCellView()
-//    {
-//        if (runData != nil)
-//        {
-//            nameLabel.text = runData.name
-//            dateLabel.text = runData.date
-//        }
-//        else
-//        {
-//            nameLabel.text = "Name"
-//            dateLabel.text = "Date"
-//        }
-//    }
-//    
-//    override public func awakeFromNib()
-//    {
-//        super.awakeFromNib()
-//    }
-//    
-//    override public func setSelected(_ selected: Bool, animated: Bool)
-//    {
-//        super.setSelected(selected, animated: animated)
-//    }
+    var runData : RunData!
+    {
+        didSet
+        {
+            updateCellView()
+        }
+    }
+    
+    private func updateCellView()
+    {
+        if (runData != nil)
+        {
+            nameLabel.text = runData.runName
+            dateLabel.text = runData.runDate
+        }
+        else
+        {
+            nameLabel.text = "Name"
+            dateLabel.text = "Date"
+        }
+    }
+    
+    override public func awakeFromNib()
+    {
+        super.awakeFromNib()
+    }
+    
+    override public func setSelected(_ selected: Bool, animated: Bool)
+    {
+        super.setSelected(selected, animated: animated)
+    }
 }

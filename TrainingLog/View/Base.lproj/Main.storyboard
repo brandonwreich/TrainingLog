@@ -449,10 +449,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="-48"/>
         </scene>
-        <!--Edit Feed Page Controller-->
+        <!--EditData-->
         <scene sceneID="jID-cE-QeY">
             <objects>
-                <tableViewController id="6Ad-U3-OP9" customClass="EditFeedPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="EditData" id="6Ad-U3-OP9" customClass="EditFeedPageController" customModule="TrainingLog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ma6-bW-HZo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
