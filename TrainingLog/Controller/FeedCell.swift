@@ -25,9 +25,9 @@ class FeedCell: UITableViewCell
     }
     
     /**
- This method updates the cells. It takes the name and date from runData and puts it into the appropiate
+     This method updates the cells. It takes the name and date from runData and puts it into the appropiate
      label. If there is no data the labels read "Name" and "Date"
- */
+     */
     private func updateCellView()
     {
         // If there is data in runData
@@ -37,7 +37,7 @@ class FeedCell: UITableViewCell
             nameLabel.text = runData.runName
             dateLabel.text = runData.runDate
         }
-        // If there is not data in runData
+            // If there is not data in runData
         else
         {
             // Set the nae and date labels to "Name" and "Date"

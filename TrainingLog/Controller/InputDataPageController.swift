@@ -151,7 +151,7 @@ public class InputDataPageController: UIViewController
             }
         }
         
-         self.performSegue(withIdentifier: "showTable", sender: self)
+        self.performSegue(withIdentifier: "showTable", sender: self)
     }
     
     /**

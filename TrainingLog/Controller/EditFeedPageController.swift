@@ -36,6 +36,7 @@ public class EditFeedPageController: UITableViewController
                 print("Error with loading file. \(error)")
             }
         }
+        
         return items
     }
     
