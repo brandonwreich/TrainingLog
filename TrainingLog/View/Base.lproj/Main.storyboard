@@ -82,7 +82,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveData:" destination="V4K-QX-6gl" eventType="touchUpInside" id="bbV-4G-STJ"/>
-                                    <segue destination="6Ad-U3-OP9" kind="presentation" id="lEJ-7r-TV5"/>
+                                    <segue destination="6Ad-U3-OP9" kind="presentation" identifier="showTable" id="lEJ-7r-TV5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-DK-A2v">

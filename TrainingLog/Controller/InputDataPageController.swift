@@ -147,8 +147,11 @@ public class InputDataPageController: UIViewController
             {
                 // Print the errors
                 print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+                return;
             }
         }
+        
+         self.performSegue(withIdentifier: "showTable", sender: self)
     }
     
     /**
