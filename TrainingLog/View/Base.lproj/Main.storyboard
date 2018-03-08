@@ -457,6 +457,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="runIdentifier" rowHeight="112" id="V9S-US-yHI" customClass="FeedCell" customModule="TrainingLog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="112"/>
@@ -491,6 +492,7 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="3X2-Hb-bDP" id="VOh-ta-f9M"/>
                                     <outlet property="deleteButton" destination="CFI-EJ-PhR" id="Kbx-xc-KiO"/>

@@ -10,6 +10,7 @@ import Foundation
 
 class RunData
 {
+    // Initalize data members
     let runName : String
     let runDate : String
     

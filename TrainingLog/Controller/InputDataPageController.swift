@@ -131,8 +131,7 @@ public class InputDataPageController: UIViewController
         let file = "data.txt"
         let writeString = "\(name), \(distance), \(time), \(pace), \(date), \(description)"
         
-        
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .localDomainMask).first
         {
             let fileURL = dir.appendingPathComponent(file)
             
@@ -140,7 +139,7 @@ public class InputDataPageController: UIViewController
             do
             {
                 // Write to file
-                try writeString.write(toFile: file, atomically: false, encoding: String.Encoding.utf8)
+                try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
                 print(fileURL)
             }
                 // Catch any errors

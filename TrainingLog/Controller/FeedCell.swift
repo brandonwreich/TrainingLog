@@ -10,6 +10,7 @@ import UIKit
 
 class FeedCell: UITableViewCell
 {
+    // Storyboard outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
@@ -23,15 +24,23 @@ class FeedCell: UITableViewCell
         }
     }
     
+    /**
+ This method updates the cells. It takes the name and date from runData and puts it into the appropiate
+     label. If there is no data the labels read "Name" and "Date"
+ */
     private func updateCellView()
     {
+        // If there is data in runData
         if (runData != nil)
         {
+            // Set the name and date labels to the name and date
             nameLabel.text = runData.runName
             dateLabel.text = runData.runDate
         }
+        // If there is not data in runData
         else
         {
+            // Set the nae and date labels to "Name" and "Date"
             nameLabel.text = "Name"
             dateLabel.text = "Date"
         }

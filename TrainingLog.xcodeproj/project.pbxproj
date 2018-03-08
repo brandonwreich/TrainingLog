@@ -46,6 +46,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0313D8DB20519B38003D24B2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		0323AAA22031E29900F25E1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +104,11 @@
 		03A5C39820162BC300561DC3 /* TrainingLog */ = {
 			isa = PBXGroup;
 			children = (
-				03CCF628205038DB00E5D940 /* Model */,
 				0323AAA22031E29900F25E1D /* Controller */,
-				0323AAA32031E2A400F25E1D /* View */,
+				03CCF628205038DB00E5D940 /* Model */,
 				0323AAA42031E2B700F25E1D /* Resources */,
+				0313D8DB20519B38003D24B2 /* Tests */,
+				0323AAA32031E2A400F25E1D /* View */,
 			);
 			path = TrainingLog;
 			sourceTree = "<group>";
