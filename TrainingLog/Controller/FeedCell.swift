@@ -37,7 +37,7 @@ class FeedCell: UITableViewCell
             nameLabel.text = runData.runName
             dateLabel.text = runData.runDate
         }
-            // If there is not data in runData
+        // If there is not data in runData
         else
         {
             // Set the nae and date labels to "Name" and "Date"

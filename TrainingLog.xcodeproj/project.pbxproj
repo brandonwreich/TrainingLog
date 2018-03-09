@@ -19,11 +19,23 @@
 		03CCF62A205038ED00E5D940 /* RunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCF629205038ED00E5D940 /* RunData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		033E24F32052D83600B06707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A5C38E20162BC300561DC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A5C39520162BC300561DC3;
+			remoteInfo = TrainingLog;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0300AE662034944100DF9DE6 /* LaunchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		031B851320334A0400700A52 /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		0323D0D72031F2B00013F55D /* RegisterPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageController.swift; sourceTree = "<group>"; };
 		0324F32120406AB400E4C038 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		033E24EE2052D83600B06707 /* TrainingLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		033E24FC2052E07300B06707 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 		03A5C39620162BC300561DC3 /* TrainingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A5C39920162BC300561DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFeedPageController.swift; sourceTree = "<group>"; };
@@ -31,11 +43,17 @@
 		03A5C3A020162BC300561DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A5C3A520162BC300561DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03CCBF73203DB38200AA2778 /* InputDataPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataPageController.swift; sourceTree = "<group>"; };
-		03CCF62620502D9C00E5D940 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = data.txt; path = ../../../../../Desktop/data.txt; sourceTree = "<group>"; };
 		03CCF629205038ED00E5D940 /* RunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		033E24EB2052D83600B06707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A5C39320162BC300561DC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,13 +64,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0313D8DB20519B38003D24B2 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		0323AAA22031E29900F25E1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +89,9 @@
 		0323AAA42031E2B700F25E1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				033E24FC2052E07300B06707 /* data.txt */,
 				03A5C3A020162BC300561DC3 /* Assets.xcassets */,
 				03A5C3A520162BC300561DC3 /* Info.plist */,
-				03CCF62620502D9C00E5D940 /* data.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -97,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				03A5C39620162BC300561DC3 /* TrainingLog.app */,
+				033E24EE2052D83600B06707 /* TrainingLogTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +119,6 @@
 				0323AAA22031E29900F25E1D /* Controller */,
 				03CCF628205038DB00E5D940 /* Model */,
 				0323AAA42031E2B700F25E1D /* Resources */,
-				0313D8DB20519B38003D24B2 /* Tests */,
 				0323AAA32031E2A400F25E1D /* View */,
 			);
 			path = TrainingLog;
@@ -124,6 +135,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		033E24ED2052D83600B06707 /* TrainingLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033E24F52052D83600B06707 /* Build configuration list for PBXNativeTarget "TrainingLogTests" */;
+			buildPhases = (
+				033E24EA2052D83600B06707 /* Sources */,
+				033E24EB2052D83600B06707 /* Frameworks */,
+				033E24EC2052D83600B06707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				033E24F42052D83600B06707 /* PBXTargetDependency */,
+			);
+			name = TrainingLogTests;
+			productName = TrainingLogTests;
+			productReference = 033E24EE2052D83600B06707 /* TrainingLogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		03A5C39520162BC300561DC3 /* TrainingLog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03A5C3A820162BC300561DC3 /* Build configuration list for PBXNativeTarget "TrainingLog" */;
@@ -151,6 +180,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CTEC;
 				TargetAttributes = {
+					033E24ED2052D83600B06707 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 03A5C39520162BC300561DC3;
+					};
 					03A5C39520162BC300561DC3 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -171,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				03A5C39520162BC300561DC3 /* TrainingLog */,
+				033E24ED2052D83600B06707 /* TrainingLogTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		033E24EC2052D83600B06707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A5C39420162BC300561DC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +230,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		033E24EA2052D83600B06707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A5C39220162BC300561DC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +254,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		033E24F42052D83600B06707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A5C39520162BC300561DC3 /* TrainingLog */;
+			targetProxy = 033E24F32052D83600B06707 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		03A5C39D20162BC300561DC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -217,6 +274,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		033E24F62052D83600B06707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrainingLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CTEC.TrainingLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingLog.app/TrainingLog";
+			};
+			name = Debug;
+		};
+		033E24F72052D83600B06707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrainingLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CTEC.TrainingLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingLog.app/TrainingLog";
+			};
+			name = Release;
+		};
 		03A5C3A620162BC300561DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +442,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		033E24F52052D83600B06707 /* Build configuration list for PBXNativeTarget "TrainingLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033E24F62052D83600B06707 /* Debug */,
+				033E24F72052D83600B06707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		03A5C39120162BC300561DC3 /* Build configuration list for PBXProject "TrainingLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

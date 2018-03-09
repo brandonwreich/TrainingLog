@@ -44,7 +44,23 @@ public class EditFeedPageController: UITableViewController
     
     override public func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 2
+        var numOfSection: NSInteger = 0
+        
+        if (runList.count > 0)
+        {
+            self.tableView.backgroundView = nil
+            numOfSection = 1
+        }
+        else
+        {    
+            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
+            noDataLabel.text = "No Data Available"
+            noDataLabel.textColor = UIColor(red: 22.0/255.0, green: 106.0/255.0, blue: 176.0/255.0, alpha: 1.0)
+            noDataLabel.textAlignment = NSTextAlignment.center
+            self.tableView.backgroundView = noDataLabel
+        }
+        
+        return numOfSection
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -54,7 +70,7 @@ public class EditFeedPageController: UITableViewController
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let currentCell = tableView.dequeueReusableCell(withIdentifier: "runIdentifier", for: indexPath) as! FeedCell
+        let currentCell = tableView.dequeueReusableCell(withIdentifier: "run", for: indexPath) as! FeedCell
         
         currentCell.runData = runList[indexPath.row]
         
@@ -64,6 +80,9 @@ public class EditFeedPageController: UITableViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 }
 

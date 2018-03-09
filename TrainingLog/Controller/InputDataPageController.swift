@@ -42,7 +42,7 @@ public class InputDataPageController: UIViewController
             // Calculate Km to Mi
             convertedNumber += (distance * conversion)
         }
-            // If the distance can't be turned into a double
+        // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -71,7 +71,7 @@ public class InputDataPageController: UIViewController
             // Calculate Mi to Km
             convertedNumber += (distance / conversion)
         }
-            // If the distance can't be turned into a double
+        // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -142,7 +142,7 @@ public class InputDataPageController: UIViewController
                 try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
                 print(fileURL)
             }
-                // Catch any errors
+            // Catch any errors
             catch let error as NSError
             {
                 // Print the errors
@@ -150,8 +150,6 @@ public class InputDataPageController: UIViewController
                 return;
             }
         }
-        
-        self.performSegue(withIdentifier: "showTable", sender: self)
     }
     
     /**
