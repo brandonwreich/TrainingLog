@@ -2,7 +2,7 @@
 //  LaunchScreenViewController.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 2/14/18.
+//  Created on 2/14/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 

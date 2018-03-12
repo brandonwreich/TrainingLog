@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 1/22/18.
+//  Created on 1/22/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
@@ -28,7 +28,7 @@ public class EditFeedPageController: UITableViewController
                 for line in dataLines
                 {
                     let item = line.components(separatedBy: ",")
-                    items.append(RunData(name: item[0], date: item[1]))
+                    items.append(RunData(name: item[0], date: item[4]))
                 }
             }
             catch let error as NSError

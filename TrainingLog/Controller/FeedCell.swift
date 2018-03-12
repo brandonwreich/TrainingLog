@@ -2,7 +2,7 @@
 //  FeedCell.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 2/23/18.
+//  Created on 2/23/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 

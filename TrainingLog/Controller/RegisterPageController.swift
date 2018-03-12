@@ -2,7 +2,7 @@
 //  RegisterPageViewController.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 2/12/18.
+//  Created on 2/12/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 

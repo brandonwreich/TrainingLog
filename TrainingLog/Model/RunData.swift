@@ -2,7 +2,7 @@
 //  RunData.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 3/7/18.
+//  Created on 3/7/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 

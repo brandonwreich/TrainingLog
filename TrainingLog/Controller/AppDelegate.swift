@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 1/22/18.
+//  Created on 1/22/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 

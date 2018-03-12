@@ -2,7 +2,7 @@
 //  InputDataViewController.swift
 //  TrainingLog
 //
-//  Created by Reich, Brandon on 2/21/18.
+//  Created on 2/21/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
