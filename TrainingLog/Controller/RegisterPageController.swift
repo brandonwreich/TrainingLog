@@ -198,4 +198,9 @@ public class RegisterPageController: UIViewController
     {
         super.viewDidLoad()
     }
+    
+    override public func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
 }

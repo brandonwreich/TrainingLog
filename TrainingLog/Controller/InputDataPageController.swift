@@ -42,7 +42,7 @@ public class InputDataPageController: UIViewController
             // Calculate Km to Mi
             convertedNumber += (distance * conversion)
         }
-        // If the distance can't be turned into a double
+            // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -71,7 +71,7 @@ public class InputDataPageController: UIViewController
             // Calculate Mi to Km
             convertedNumber += (distance / conversion)
         }
-        // If the distance can't be turned into a double
+            // If the distance can't be turned into a double
         else
         {
             // Display alert message "Valid number required"
@@ -93,6 +93,7 @@ public class InputDataPageController: UIViewController
         let distance = distanceTextField.text!
         
         // Calculate the pace
+        // Help from StackOverflow
         let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
         let roundedPaceMinutes = Double(round(paceMinutes))
         let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
@@ -119,7 +120,6 @@ public class InputDataPageController: UIViewController
      */
     @IBAction func saveData(_ sender: Any)
     {
-        // Initalize data members
         let name = nameTextField.text!
         let distance = distanceTextField.text!
         let time = minTextField.text! + ":" + secTextField.text!
@@ -127,29 +127,77 @@ public class InputDataPageController: UIViewController
         let date = dateTextField.text!
         let description = descriptionTextField.text!
         
-        // Initalize paths
-        let file = "data.txt"
-        let writeString = "\(name), \(distance), \(time), \(pace), \(date), \(description)"
+        let fileName = "data.csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .localDomainMask).first
+        var csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
+        
+        if (!FileManager.default.fileExists(atPath: fileName))
         {
-            let fileURL = dir.appendingPathComponent(file)
-            
-            // Try to write the string
             do
             {
-                // Write to file
-                try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
-                print(fileURL)
+                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+                
+                print(path!)
             }
-            // Catch any errors
-            catch let error as NSError
+            catch
             {
-                // Print the errors
-                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-                return;
+                print("\(error)")
             }
         }
+        else
+        {
+            do
+            {
+                try csvText.write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8)
+                
+                print(path!)
+                print("File already exists")
+            }
+            catch
+            {
+                print("\(error)")
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        //        // Initalize data members
+        //        let name = nameTextField.text!
+        //        let distance = distanceTextField.text!
+        //        let time = minTextField.text! + ":" + secTextField.text!
+        //        let pace = paceTextField.text!
+        //        let date = dateTextField.text!
+        //        let description = descriptionTextField.text!
+        //
+        //        // Initalize paths
+        //        let file = "data.txt"
+        //        let writeString = "\(name), \(distance), \(time), \(pace), \(date), \(description)"
+        //
+        //        if let dir = FileManager.default.urls(for: .documentDirectory, in: .localDomainMask).first
+        //        {
+        //            let fileURL = dir.appendingPathComponent(file)
+        //
+        //            // Try to write the string
+        //            do
+        //            {
+        //                // Write to file
+        //                try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+        //                print(fileURL)
+        //            }
+        //            // Catch any errors
+        //            catch let error as NSError
+        //            {
+        //                // Print the errors
+        //                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        //                return;
+        //            }
+        //        }
     }
     
     /**

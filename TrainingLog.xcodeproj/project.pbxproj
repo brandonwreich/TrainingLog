@@ -68,12 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				03A5C39920162BC300561DC3 /* AppDelegate.swift */,
+				0345A36B2056CB56003DE694 /* EditDataPage */,
+				03CCBF73203DB38200AA2778 /* InputDataPageController.swift */,
 				0300AE662034944100DF9DE6 /* LaunchScreenController.swift */,
 				031B851320334A0400700A52 /* LoginPageController.swift */,
 				0323D0D72031F2B00013F55D /* RegisterPageController.swift */,
-				03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */,
-				03CCBF73203DB38200AA2778 /* InputDataPageController.swift */,
-				0324F32120406AB400E4C038 /* FeedCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +93,15 @@
 				03A5C3A520162BC300561DC3 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0345A36B2056CB56003DE694 /* EditDataPage */ = {
+			isa = PBXGroup;
+			children = (
+				03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */,
+				0324F32120406AB400E4C038 /* FeedCell.swift */,
+			);
+			path = EditDataPage;
 			sourceTree = "<group>";
 		};
 		03A5C38D20162BC300561DC3 = {
