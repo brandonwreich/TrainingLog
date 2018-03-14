@@ -699,7 +699,6 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xRP-0e-PCp"/>
         <segue reference="1kl-rE-aiE"/>
         <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>
