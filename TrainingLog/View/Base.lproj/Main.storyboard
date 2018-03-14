@@ -97,6 +97,7 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="6fy-2x-dZk"/>
+                                    <constraint firstAttribute="width" constant="115" id="vzM-xA-ZRE"/>
                                 </constraints>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -260,7 +261,6 @@
                             <constraint firstItem="8vr-oM-sgi" firstAttribute="top" secondItem="Yvj-d1-Brk" secondAttribute="bottom" constant="13" id="adn-iv-HI2"/>
                             <constraint firstItem="pP5-i1-enF" firstAttribute="leading" secondItem="xIW-gu-1s7" secondAttribute="trailing" constant="14" id="c6S-gj-L53"/>
                             <constraint firstItem="E5w-IQ-X1g" firstAttribute="leading" secondItem="x2C-eN-pk9" secondAttribute="trailing" constant="8" id="cPi-53-mHT"/>
-                            <constraint firstItem="HiH-pF-0qi" firstAttribute="leading" secondItem="aNo-HN-Cao" secondAttribute="trailing" constant="87" id="cR9-6J-DZ6"/>
                             <constraint firstItem="aNo-HN-Cao" firstAttribute="leading" secondItem="QMk-QJ-czN" secondAttribute="leading" constant="29" id="cXN-C0-vHN"/>
                             <constraint firstItem="QMk-QJ-czN" firstAttribute="trailing" secondItem="qsx-ub-BkF" secondAttribute="trailing" constant="36" id="ciO-S1-TLW"/>
                             <constraint firstItem="yDZ-7d-kBo" firstAttribute="leading" secondItem="drX-0W-hZB" secondAttribute="trailing" constant="14" id="dHb-OZ-fRI"/>
@@ -483,16 +483,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-EJ-PhR">
-                                            <rect key="frame" x="256" y="53" width="100" height="30"/>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="bR8-b4-YEx"/>
-                                            </constraints>
-                                            <state key="normal" title="Delete">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-IW-9Fr">
                                             <rect key="frame" x="256" y="16" width="100" height="30"/>
                                             <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -503,20 +493,30 @@
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-EJ-PhR">
+                                            <rect key="frame" x="256" y="62" width="100" height="30"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="bR8-b4-YEx"/>
+                                            </constraints>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="YYg-IW-9Fr" firstAttribute="leading" secondItem="9d9-5L-bF0" secondAttribute="trailing" constant="8" id="5t6-nR-S0i"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="B1F-5M-Rrb"/>
                                         <constraint firstItem="YYg-IW-9Fr" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="8" id="C26-cp-VNK"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="CFI-EJ-PhR" secondAttribute="bottom" constant="20.5" id="EAK-LT-waN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3X2-Hb-bDP" secondAttribute="bottom" constant="20.5" id="EU3-17-ecG"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="21" id="Faf-vj-CCm"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="YYg-IW-9Fr" secondAttribute="trailing" constant="11" id="Jpd-jq-CeM"/>
-                                        <constraint firstItem="CFI-EJ-PhR" firstAttribute="top" secondItem="YYg-IW-9Fr" secondAttribute="bottom" constant="7" id="KN9-n4-Uv2"/>
+                                        <constraint firstItem="CFI-EJ-PhR" firstAttribute="top" secondItem="YYg-IW-9Fr" secondAttribute="bottom" constant="16" id="Ka2-Ql-qLC"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="CFI-EJ-PhR" secondAttribute="trailing" constant="11" id="OfI-4c-Tm0"/>
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="12" id="Zrs-1J-2zp"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="21" id="fA7-gH-EDZ"/>
                                         <constraint firstItem="CFI-EJ-PhR" firstAttribute="leading" secondItem="3X2-Hb-bDP" secondAttribute="trailing" constant="8" id="i7U-A2-JRr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CFI-EJ-PhR" secondAttribute="bottom" constant="11.5" id="kkZ-HK-nNc"/>
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="skK-oP-DN0"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -538,7 +538,7 @@
                     <navigationItem key="navigationItem" id="W2c-tV-YHA">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xhG-BE-eJz">
-                            <rect key="frame" x="137.5" y="7" width="100" height="30"/>
+                            <rect key="frame" x="130" y="7" width="115" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Add New">
@@ -582,6 +582,7 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="PM4-k8-jdT"/>
+                                    <constraint firstAttribute="width" constant="115" id="hH9-pI-Ggh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel">
@@ -652,7 +653,6 @@
                             <constraint firstItem="q3s-g9-Gm2" firstAttribute="top" secondItem="yND-Hb-3ON" secondAttribute="bottom" constant="8" id="Vd9-je-Qg8"/>
                             <constraint firstItem="w4q-2e-iR2" firstAttribute="trailing" secondItem="q3s-g9-Gm2" secondAttribute="trailing" constant="16" id="Vkl-hY-epO"/>
                             <constraint firstItem="xFC-Np-3Pt" firstAttribute="leading" secondItem="w4q-2e-iR2" secondAttribute="leading" constant="55" id="WST-3B-XVI"/>
-                            <constraint firstItem="Hkq-nZ-liQ" firstAttribute="leading" secondItem="xFC-Np-3Pt" secondAttribute="trailing" constant="35" id="a7H-Eb-PtT"/>
                             <constraint firstItem="vAq-zZ-lKD" firstAttribute="leading" secondItem="w4q-2e-iR2" secondAttribute="leading" constant="16" id="deR-zP-6GG"/>
                             <constraint firstItem="w4q-2e-iR2" firstAttribute="trailing" secondItem="vAq-zZ-lKD" secondAttribute="trailing" constant="16" id="dv7-ta-og0"/>
                             <constraint firstItem="yND-Hb-3ON" firstAttribute="top" secondItem="M81-o6-A19" secondAttribute="bottom" constant="77" id="eQw-5C-nlA"/>
@@ -699,7 +699,8 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AjP-Vd-DfC"/>
-        <segue reference="BaP-SX-f0T"/>
+        <segue reference="xRP-0e-PCp"/>
+        <segue reference="1kl-rE-aiE"/>
+        <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>
 </document>
