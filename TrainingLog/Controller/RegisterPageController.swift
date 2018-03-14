@@ -28,11 +28,24 @@ public class RegisterPageController: UIViewController
      */
     @IBAction func registerButtonClicked(_ sender: Any)
     {
+        checkIfFieldsAreEmpty()
+        checkIfUsedValidEmail()
+        checkIfEmailAlreadyExists()
+        checkIfUsedValidPassword()
+        checkIfPasswordEqualsConfirmPassword()
+        storeData()
+        displayConfirmationMessageAndDismissTheView()
+    }
+    
+    /**
+     This method checks to see if all of the fields are filled. If not it returns an error message.
+     */
+    public func checkIfFieldsAreEmpty()
+    {
         // Initalize data members
         let userEmail =  userEmailTextField.text!
         let userPassword = userPasswordTextField.text!
         let userConfirmPassword = userConfirmPasswordTextField.text!
-        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         
         // If any of the fields are empty
         if (userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
@@ -44,6 +57,18 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+    }
+    
+    /**
+     This method checks to see if the user inputed a valid email. It checks for a '@' and makes sure
+     that it doesn't contain illegal characters such as '<' or '['. It also makes sure that the
+     the email doesn't start with any numbers, spaces, or periods. Returns an error message if
+     there are any problems
+     */
+    public func checkIfUsedValidEmail()
+    {
+        // Initalize data members
+        let userEmail =  userEmailTextField.text!
         
         // If the email contains a '@'
         if (!userEmail.contains("@"))
@@ -101,6 +126,17 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+    }
+    
+    /**
+     This method checks to see if the email already exsits in the system. Returns an error message
+     if there are any problems.
+     */
+    public func checkIfEmailAlreadyExists()
+    {
+        // Initalize data members
+        let userEmail =  userEmailTextField.text!
+        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         
         // Check to see if this email alread exsists
         if( userEmail == userEmailStored)
@@ -114,6 +150,17 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+    }
+    
+    /**
+     This method checks to see if the user inputs a valid password. If the password is less than 5
+     or more than 20 characters long it returns an error message. You also need one number to have
+     a valid password.
+     */
+    public func checkIfUsedValidPassword()
+    {
+        // Initalize data members
+        let userPassword = userPasswordTextField.text!
         
         // If the password is too short or too long
         if (userPassword.count < 5 || userPassword.count > 20)
@@ -146,6 +193,17 @@ public class RegisterPageController: UIViewController
             userPasswordTextField.text = ""
             userConfirmPasswordTextField.text = ""
         }
+    }
+    
+    /**
+     This method checks to see if the password box equals the confirm password box. Returns an
+     error message with any problems
+     */
+    public func checkIfPasswordEqualsConfirmPassword()
+    {
+        // Initalize data members
+        let userPassword = userPasswordTextField.text!
+        let userConfirmPassword = userConfirmPasswordTextField.text!
         
         // If the userPassword does not match the userConfirmPassword
         if (userPassword != userConfirmPassword)
@@ -159,12 +217,28 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+    }
+    
+    /**
+     This method stores the data in NSUserDefaults
+     */
+    public func storeData()
+    {
+        // Initalize data members
+        let userEmail =  userEmailTextField.text!
+        let userPassword = userPasswordTextField.text!
         
         // Store data
         UserDefaults.standard.set(userEmail, forKey: "userEmail")
         UserDefaults.standard.set(userPassword, forKey: "userPassword")
         UserDefaults.standard.synchronize();
-        
+    }
+    
+    /**
+     This method shows the confirmation message and dismissese the view.
+     */
+    public func displayConfirmationMessageAndDismissTheView()
+    {
         // Display confirmation message
         let myAlert = UIAlertController(title: "Congradulations", message: "Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default)
