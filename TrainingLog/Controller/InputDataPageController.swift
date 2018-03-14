@@ -94,15 +94,24 @@ public class InputDataPageController: UIViewController
         
         // Calculate the pace
         // Help from StackOverflow
-        let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
-        let roundedPaceMinutes = Double(round(paceMinutes))
-        let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
-        let intPaceMinutes = Int(round(roundedPaceMinutes))
-        let paceSeconds = Int(round(decimalPaceSeconds * 60))
-        let paceSecondsZero = String(format: "%02d", paceSeconds)
-        
-        // Set the paceTextField with the pace
-        paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
+        if (minutes.isEmpty || seconds.isEmpty || distance.isEmpty)
+        {
+            displayMyAlertMessage(userMessage: "You must enter data into the distance and time fields")
+            
+            return;
+        }
+        else
+        {
+            let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
+            let roundedPaceMinutes = Double(round(paceMinutes))
+            let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
+            let intPaceMinutes = Int(round(roundedPaceMinutes))
+            let paceSeconds = Int(round(decimalPaceSeconds * 60))
+            let paceSecondsZero = String(format: "%02d", paceSeconds)
+            
+            // Set the paceTextField with the pace
+            paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
+        }
     }
     
     /**
@@ -130,7 +139,7 @@ public class InputDataPageController: UIViewController
         let fileName = "data.csv"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         
-        var csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
+        let csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
         
         if (!FileManager.default.fileExists(atPath: fileName))
         {
@@ -159,45 +168,6 @@ public class InputDataPageController: UIViewController
                 print("\(error)")
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        //        // Initalize data members
-        //        let name = nameTextField.text!
-        //        let distance = distanceTextField.text!
-        //        let time = minTextField.text! + ":" + secTextField.text!
-        //        let pace = paceTextField.text!
-        //        let date = dateTextField.text!
-        //        let description = descriptionTextField.text!
-        //
-        //        // Initalize paths
-        //        let file = "data.txt"
-        //        let writeString = "\(name), \(distance), \(time), \(pace), \(date), \(description)"
-        //
-        //        if let dir = FileManager.default.urls(for: .documentDirectory, in: .localDomainMask).first
-        //        {
-        //            let fileURL = dir.appendingPathComponent(file)
-        //
-        //            // Try to write the string
-        //            do
-        //            {
-        //                // Write to file
-        //                try writeString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
-        //                print(fileURL)
-        //            }
-        //            // Catch any errors
-        //            catch let error as NSError
-        //            {
-        //                // Print the errors
-        //                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        //                return;
-        //            }
-        //        }
     }
     
     /**
