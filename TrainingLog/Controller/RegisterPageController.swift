@@ -17,14 +17,8 @@ public class RegisterPageController: UIViewController
     @IBOutlet weak var RegisterButton: UIButton!
     
     /**
-     When the register button is clicked it first checks to see if all of the fields are filled. If
-     some are empty you get an error message. Then it checks to see if you have a valid email, checking
-     for a '@', and making sure you don't have any illegal characters such as '<' or '[' and also that
-     you don't start with any illegal characters. If any of the creitera is NOT met then it will display an
-     error message. It then checks to see if there is a valid password. A valid password contains 6-20
-     characters and a number. Next it checks to see if the userPassword field and the userConfirmPassword field
-     match, if not you get an error message. If all of those tests are passed the email and password are stored
-     using UserDefaults and you get a confirmation message showing you have successfully registered.
+     When the register button is clicked it calls these helper methods to register
+     the new user.
      */
     @IBAction func registerButtonClicked(_ sender: Any)
     {
