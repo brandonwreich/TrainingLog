@@ -35,7 +35,7 @@ public class EditFeedPageController: UITableViewController
                     if(line.count > 2)
                     {
                         let item = line.components(separatedBy: ", ")
-                        items.append(RunData(name: item[0], date: item[4]))
+                        items.append(RunData(name: item[0], distance: item[1], date: item[4]))
                     }
                 }
             }

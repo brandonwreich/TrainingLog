@@ -12,11 +12,13 @@ class RunData
 {
     // Initalize data members
     let runName : String
+    let runDistance : String
     let runDate : String
     
-    init(name: String, date: String)
+    init(name: String, distance: String, date: String)
     {
         runName = name
+        runDistance = distance
         runDate = date
     }
 }

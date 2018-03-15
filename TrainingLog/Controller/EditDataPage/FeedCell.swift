@@ -13,6 +13,7 @@ class FeedCell: UITableViewCell
     // Storyboard outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -35,6 +36,7 @@ class FeedCell: UITableViewCell
         {
             // Set the name and date labels to the name and date
             nameLabel.text = runData.runName
+            distanceLabel.text = runData.runDistance + " miles"
             dateLabel.text = runData.runDate
         }
         // If there is not data in runData
@@ -42,7 +44,9 @@ class FeedCell: UITableViewCell
         {
             // Set the nae and date labels to "Name" and "Date"
             nameLabel.text = "Name"
+            distanceLabel.text = "Distance"
             dateLabel.text = "Date"
+            
         }
     }
     
