@@ -141,21 +141,24 @@ public class InputDataPageController: UIViewController
         
         let csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
         
-//        if (!FileManager.default.fileExists(atPath: fileName))
-//        {
-//            do
-//            {
-//                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-//
-//                print(path!)
-//            }
-//            catch
-//            {
-//                print("\(error)")
-//            }
-//        }
-//        else
-//        {
+ /**
+ 
+        if (!FileManager.default.fileExists(atPath: fileName))
+        {
+            do
+            {
+                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+
+                print(path!)
+            }
+            catch
+            {
+                print("\(error)")
+            }
+        }
+        else
+        {
+ */
             do
             {
                 try csvText.write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8)
@@ -166,8 +169,10 @@ public class InputDataPageController: UIViewController
             catch
             {
                 print("\(error)")
+                
+                return;
             }
-//        }
+    //    }
     }
     
     /**

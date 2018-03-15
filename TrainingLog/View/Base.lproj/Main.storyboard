@@ -462,7 +462,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="run" rowHeight="112" id="V9S-US-yHI" customClass="FeedCell" customModule="TrainingLog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="112"/>
@@ -519,6 +519,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="26" id="7wU-1b-GjA"/>
                                         <constraint firstItem="YYg-IW-9Fr" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="7" id="BU7-5u-QtX"/>
