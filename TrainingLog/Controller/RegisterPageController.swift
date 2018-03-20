@@ -20,6 +20,8 @@ public class RegisterPageController: UIViewController
      When the register button is clicked it calls these helper methods to register
      the new user.
      */
+    // Start Abstraction
+    // Start Algorithm
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         checkIfFieldsAreEmpty()
@@ -52,6 +54,9 @@ public class RegisterPageController: UIViewController
             return;
         }
     }
+    
+    // End Abstraction
+    // End Algorithm
     
     /**
      This method checks to see if the user inputed a valid email. It checks for a '@' and makes sure
