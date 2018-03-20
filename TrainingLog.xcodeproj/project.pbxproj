@@ -35,7 +35,6 @@
 		0323D0D72031F2B00013F55D /* RegisterPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageController.swift; sourceTree = "<group>"; };
 		0324F32120406AB400E4C038 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		033E24EE2052D83600B06707 /* TrainingLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		033E24FC2052E07300B06707 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 		03A5C39620162BC300561DC3 /* TrainingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A5C39920162BC300561DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03A5C39B20162BC300561DC3 /* EditFeedPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFeedPageController.swift; sourceTree = "<group>"; };
@@ -88,7 +87,6 @@
 		0323AAA42031E2B700F25E1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				033E24FC2052E07300B06707 /* data.txt */,
 				03A5C3A020162BC300561DC3 /* Assets.xcassets */,
 				03A5C3A520162BC300561DC3 /* Info.plist */,
 			);
