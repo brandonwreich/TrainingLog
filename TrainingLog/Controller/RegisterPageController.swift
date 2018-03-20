@@ -65,7 +65,7 @@ public class RegisterPageController: UIViewController
         let userEmail =  userEmailTextField.text!
         
         // If the email contains a '@'
-        if (!userEmail.contains("@"))
+        if (userEmail.index(of: "@") != nil)
         {
             // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Vaild email required")
@@ -77,15 +77,15 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the email contains any illegal characters
-        else if (userEmail.contains("<") ||
-            userEmail.contains(">") ||
-            userEmail.contains("(") ||
-            userEmail.contains(")") ||
-            userEmail.contains("[") ||
-            userEmail.contains("]") ||
-            userEmail.contains(";") ||
-            userEmail.contains(",") ||
-            userEmail.contains(" "))
+        else if (userEmail.index(of: "<") != nil ||
+            userEmail.index(of: ">") != nil ||
+            userEmail.index(of: "(") != nil ||
+            userEmail.index(of: ")") != nil ||
+            userEmail.index(of: "[") != nil ||
+            userEmail.index(of: "]") != nil ||
+            userEmail.index(of: ";") != nil ||
+            userEmail.index(of: ",") != nil ||
+            userEmail.index(of: " ") != nil)
         {
             // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Valid email required")
@@ -133,7 +133,7 @@ public class RegisterPageController: UIViewController
         let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         
         // Check to see if this email alread exsists
-        if( userEmail == userEmailStored)
+        if(userEmailStored == userEmail)
         {
             // Display alert message 'Email already exsits'
             displayMyAlertMessage(userMessage: "This email already exists")
@@ -169,23 +169,25 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the password does NOT contain a number
-        else if(!userPassword.contains("0") ||
-            !userPassword.contains("1") ||
-            !userPassword.contains("2") ||
-            !userPassword.contains("3") ||
-            !userPassword.contains("4") ||
-            !userPassword.contains("5") ||
-            !userPassword.contains("6") ||
-            !userPassword.contains("7") ||
-            !userPassword.contains("8") ||
-            !userPassword.contains("9"))
+        else if(userPassword.index(of: "0") == nil &&
+            userPassword.index(of: "1") == nil &&
+            userPassword.index(of: "2") == nil &&
+            userPassword.index(of: "3") == nil &&
+            userPassword.index(of: "4") == nil &&
+            userPassword.index(of: "5") == nil &&
+            userPassword.index(of: "6") == nil &&
+            userPassword.index(of: "7") == nil &&
+            userPassword.index(of: "8") == nil &&
+            userPassword.index(of: "9") == nil)
         {
             // Display alert message 'Password must contain a number'
-            displayMyAlertMessage(userMessage: "Passowords must contain at least one number")
+            displayMyAlertMessage(userMessage: "Passwords must contain at least one number")
             
             // Set the password fields to empty
             userPasswordTextField.text = ""
             userConfirmPasswordTextField.text = ""
+            
+            return;
         }
     }
     
