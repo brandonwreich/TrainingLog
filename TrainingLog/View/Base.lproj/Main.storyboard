@@ -489,26 +489,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-IW-9Fr">
-                                            <rect key="frame" x="256" y="15" width="100" height="30"/>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="U1L-QV-VK3"/>
-                                            </constraints>
-                                            <state key="normal" title="Edit">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-EJ-PhR">
-                                            <rect key="frame" x="256" y="62" width="100" height="30"/>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="bR8-b4-YEx"/>
-                                            </constraints>
-                                            <state key="normal" title="Delete">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpM-Oc-aZp">
                                             <rect key="frame" x="147" y="67" width="80" height="21"/>
                                             <constraints>
@@ -518,29 +498,36 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-EJ-PhR">
+                                            <rect key="frame" x="256" y="40" width="100" height="30"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="bR8-b4-YEx"/>
+                                            </constraints>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="CFI-EJ-PhR" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="32" id="3Nh-ay-cA1"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="26" id="7wU-1b-GjA"/>
-                                        <constraint firstItem="YYg-IW-9Fr" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="7" id="BU7-5u-QtX"/>
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="DPm-kX-Gwm"/>
                                         <constraint firstItem="vpM-Oc-aZp" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="26" id="McY-VD-Co4"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="NrW-ka-xFI"/>
                                         <constraint firstItem="CFI-EJ-PhR" firstAttribute="leading" secondItem="vpM-Oc-aZp" secondAttribute="trailing" constant="29" id="PSF-xl-1LU"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="YYg-IW-9Fr" secondAttribute="trailing" constant="11" id="YEd-ag-4mH"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3X2-Hb-bDP" secondAttribute="bottom" constant="15.5" id="eeI-up-MFm"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="CFI-EJ-PhR" secondAttribute="trailing" constant="11" id="rpZ-xM-FyZ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="CFI-EJ-PhR" secondAttribute="bottom" constant="11.5" id="vIV-Hd-rrp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CFI-EJ-PhR" secondAttribute="bottom" constant="33.5" id="rsh-6n-sJA"/>
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="12" id="vbE-R1-8ES"/>
-                                        <constraint firstItem="CFI-EJ-PhR" firstAttribute="top" secondItem="YYg-IW-9Fr" secondAttribute="bottom" constant="17" id="x9P-Wp-Xgs"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="3X2-Hb-bDP" id="VOh-ta-f9M"/>
                                     <outlet property="deleteButton" destination="CFI-EJ-PhR" id="Kbx-xc-KiO"/>
                                     <outlet property="distanceLabel" destination="vpM-Oc-aZp" id="1zE-Yj-cYU"/>
-                                    <outlet property="editButton" destination="YYg-IW-9Fr" id="ppJ-qJ-rZD"/>
                                     <outlet property="nameLabel" destination="9d9-5L-bF0" id="upT-Cg-Bxw"/>
                                 </connections>
                             </tableViewCell>

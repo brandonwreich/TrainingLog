@@ -125,13 +125,13 @@ public class InputDataPageController: UIViewController
     }
     
     /**
-     
+     Saves the data into a file called data.csv
      */
     @IBAction func saveData(_ sender: Any)
     {
         let name = nameTextField.text!
         let distance = distanceTextField.text!
-        let time = minTextField.text! + ":" + secTextField.text!
+        let finalTime = minTextField.text! + ":" + secTextField.text!
         let pace = paceTextField.text!
         let date = dateTextField.text!
         let description = descriptionTextField.text!
@@ -140,7 +140,7 @@ public class InputDataPageController: UIViewController
         let path = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
         let filePath = path.appendingPathComponent(fileName)
         
-        let csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
+        let csvText = "\(name), \(distance), \(finalTime), \(pace), \(date), \(description) \n"
         let data =  csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
         if FileManager.default.fileExists(atPath: filePath.path)
@@ -165,8 +165,9 @@ public class InputDataPageController: UIViewController
     }
     
     /**
-     This method creates an alert to display every time one of the crietera is not met in registerButtonClicked.
-     It takes a string as a parameter so you can type in the message you want.
+     This method creates an alert to display every time one of the crietera is not met in
+     registerButtonClicked. It takes a string as a parameter so you can type in the
+     message you want.
      */
     public func displayMyAlertMessage(userMessage: String)
     {

@@ -9,7 +9,7 @@
 import UIKit
 
 public class EditFeedPageController: UITableViewController
-{
+{    
     // Initalize data members
     lazy var runList : [RunData] =
         {
@@ -25,7 +25,6 @@ public class EditFeedPageController: UITableViewController
         var items = [RunData]()
         
         let filePath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]).appendingPathComponent("data.csv")
-        
         
         if let input = try? String(contentsOf: filePath)
         {
@@ -102,6 +101,3 @@ public class EditFeedPageController: UITableViewController
         self.tableView.dataSource = self
     }
 }
-
-
-
