@@ -14,7 +14,6 @@ class FeedCell: UITableViewCell
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
     var runData : RunData!
@@ -47,7 +46,6 @@ class FeedCell: UITableViewCell
             nameLabel.text = "Name"
             distanceLabel.text = "Distance"
             dateLabel.text = "Date"
-            
         }
     }
     
