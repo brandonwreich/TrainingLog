@@ -24,24 +24,19 @@ public class EditFeedPageController: UITableViewController
         // Initalize data members
         var items = [RunData]()
         
-        if let filePath = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("data.csv")
+        let filePath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]).appendingPathComponent("data.csv")
+        
+        
+        if let input = try? String(contentsOf: filePath)
         {
-            do
+            let dataLines = input.components(separatedBy: "\n")
+            for line in dataLines
             {
-                let input = try String(contentsOf: filePath)
-                let dataLines = input.components(separatedBy: "\n")
-                for line in dataLines
+                if(line.count > 2)
                 {
-                    if(line.count > 2)
-                    {
-                        let item = line.components(separatedBy: ", ")
-                        items.append(RunData(name: item[0], distance: item[1], date: item[4]))
-                    }
+                    let item = line.components(separatedBy: ", ")
+                    items.append(RunData(name: item[0], distance: item[1], date: item[4]))
                 }
-            }
-            catch let error as NSError
-            {
-                print("Error with loading file. \(error)")
             }
         }
         
@@ -67,7 +62,7 @@ public class EditFeedPageController: UITableViewController
         }
             // If there is no data in the list
         else
-        {    
+        {
             // Put a label on the view that says "No Data Available"
             let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
             noDataLabel.text = "No Data Available"

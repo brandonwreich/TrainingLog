@@ -137,42 +137,31 @@ public class InputDataPageController: UIViewController
         let description = descriptionTextField.text!
         
         let fileName = "data.csv"
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+        let path = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+        let filePath = path.appendingPathComponent(fileName)
         
         let csvText = "\(name), \(distance), \(time), \(pace), \(date), \(description) \n"
+        let data =  csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
- /**
- 
-        if (!FileManager.default.fileExists(atPath: fileName))
+        if FileManager.default.fileExists(atPath: filePath.path)
         {
-            do
+            var error : NSError?
+            if let fileHandle = try? FileHandle(forWritingTo: filePath)
             {
-                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-
-                print(path!)
+                fileHandle.seekToEndOfFile()
+                fileHandle.write(data)
+                fileHandle.closeFile()
             }
-            catch
+            else
             {
-                print("\(error)")
+                displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
             }
         }
         else
         {
- */
-            do
-            {
-                try csvText.write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8)
-                
-                print(path!)
-                print("File already exists")
-            }
-            catch
-            {
-                print("\(error)")
-                
-                return;
-            }
-    //    }
+            var error : NSError?
+            displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
+        }
     }
     
     /**
