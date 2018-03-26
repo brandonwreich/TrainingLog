@@ -20,8 +20,8 @@ public class RegisterPageController: UIViewController
      When the register button is clicked it calls these helper methods to register
      the new user.
      */
-    // Start Abstraction
-    // Start Algorithm
+    //startAbstraction
+    //startAlgorithm
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         checkIfFieldsAreEmpty()
@@ -55,8 +55,8 @@ public class RegisterPageController: UIViewController
         }
     }
     
-    // End Abstraction
-    // End Algorithm
+    //endAbstraction
+    //endAlgorithm
     
     /**
      This method checks to see if the user inputed a valid email. It checks for a '@' and makes sure
@@ -82,6 +82,7 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the email contains any illegal characters
+            //startAlgorithm
         else if (userEmail.index(of: "<") != nil ||
             userEmail.index(of: ">") != nil ||
             userEmail.index(of: "(") != nil ||
@@ -101,6 +102,9 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+            //endAlgorithm
+            
+            //startAlgorithm
             // If the email starts with a number, hyphen, period, or underscore
         else if (userEmail.hasPrefix("_") ||
             userEmail.hasPrefix(".") ||
@@ -125,6 +129,7 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+        //endAlgorithm
     }
     
     /**
@@ -174,6 +179,7 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the password does NOT contain a number
+            //startAlgorithm
         else if(userPassword.index(of: "0") == nil &&
             userPassword.index(of: "1") == nil &&
             userPassword.index(of: "2") == nil &&
@@ -194,6 +200,7 @@ public class RegisterPageController: UIViewController
             
             return;
         }
+        //endAlgorithm
     }
     
     /**
