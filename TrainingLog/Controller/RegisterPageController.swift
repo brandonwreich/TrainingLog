@@ -70,7 +70,7 @@ public class RegisterPageController: UIViewController
         let userEmail =  userEmailTextField.text!
         
         // If the email contains a '@'
-        if (userEmail.index(of: "@") != nil)
+        if (userEmail.index(of: "@") == nil)
         {
             // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Vaild email required")

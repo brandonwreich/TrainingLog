@@ -39,7 +39,7 @@ class FeedCell: UITableViewCell
             distanceLabel.text = runData.runDistance + " miles"
             dateLabel.text = runData.runDate
         }
-        // If there is not data in runData
+            // If there is not data in runData
         else
         {
             // Set the nae and date labels to "Name" and "Date"
