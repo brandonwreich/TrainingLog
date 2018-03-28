@@ -96,12 +96,14 @@ public class InputDataPageController: UIViewController
         // Help from StackOverflow
         if (minutes.isEmpty || seconds.isEmpty || distance.isEmpty)
         {
+            // Display an error message
             displayMyAlertMessage(userMessage: "You must enter data into the distance and time fields")
             
             return;
         }
         else
-        {
+        {            
+            // Initalize data members
             let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
             let roundedPaceMinutes = Double(round(paceMinutes))
             let decimalPaceSeconds = paceMinutes - roundedPaceMinutes
@@ -129,45 +131,58 @@ public class InputDataPageController: UIViewController
      */
     @IBAction func saveData(_ sender: Any)
     {
+        // Initalize data members
         let name = nameTextField.text!
         let distance = distanceTextField.text!
         let finalTime = minTextField.text! + ":" + secTextField.text!
         let pace = paceTextField.text!
         let date = dateTextField.text!
         let description = descriptionTextField.text!
-        
         let fileName = "data.csv"
         let path = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
         let filePath = path.appendingPathComponent(fileName)
-        
         let csvText = "\(name), \(distance), \(finalTime), \(pace), \(date), \(description) \n"
         let data =  csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
+        // If the file exists
         if FileManager.default.fileExists(atPath: filePath.path)
         {
+            // Initalize data members
             var error : NSError?
+            
+            // Try to write to open the file
             if let fileHandle = try? FileHandle(forWritingTo: filePath)
             {
+                // Find the end of the file
                 fileHandle.seekToEndOfFile()
+                
+                // Write the data
                 fileHandle.write(data)
+                
+                // Close the file
                 fileHandle.closeFile()
             }
+                // If the file won't open
             else
             {
+                // Display error message
                 displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
             }
         }
+            // If you can't write
         else
         {
+            // Initalize data members
             var error : NSError?
+            
+            // Display error message
             displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
         }
     }
     
     /**
-     This method creates an alert to display every time one of the crietera is not met in
-     registerButtonClicked. It takes a string as a parameter so you can type in the
-     message you want.
+     This method creates an alert to display every time one of the crietera is not met.
+     It takes a string as a parameter so you can type in the message you want to display.
      */
     public func displayMyAlertMessage(userMessage: String)
     {

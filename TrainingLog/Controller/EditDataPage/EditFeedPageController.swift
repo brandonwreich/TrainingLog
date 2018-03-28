@@ -28,11 +28,13 @@ public class EditFeedPageController: UITableViewController
         
         if let input = try? String(contentsOf: filePath)
         {
+            // Seperate each workout
             let dataLines = input.components(separatedBy: "\n")
             for line in dataLines
             {
                 if(line.count > 2)
                 {
+                    // Seperate each element of the workout
                     let item = line.components(separatedBy: ", ")
                     items.append(RunData(name: item[0], distance: item[1], date: item[4]))
                 }
@@ -64,7 +66,7 @@ public class EditFeedPageController: UITableViewController
         {
             // Put a label on the view that says "No Data Available"
             let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
-            noDataLabel.text = "No Data Available"
+            noDataLabel.text = "No Data Avaliable"
             noDataLabel.textColor = UIColor(red: 22.0/255.0, green: 106.0/255.0, blue: 176.0/255.0, alpha: 1.0)
             noDataLabel.textAlignment = NSTextAlignment.center
             self.tableView.backgroundView = noDataLabel
@@ -96,8 +98,5 @@ public class EditFeedPageController: UITableViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
     }
 }
