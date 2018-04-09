@@ -16,11 +16,19 @@ public class LoginPageController: UIViewController
     @IBOutlet weak var LoginButton: UIButton!
     
     /**
-     When the login button is pushed it checks to see if your email and password match
+     When the login button is pushed it calls the login method.
+     */
+    @IBAction func loginButtonPushed(_ sender: Any)
+    {
+        login()
+    }
+    
+    /**
+     This method checks to see if your email and password match
      the ones that are stored using UserDefaults. If not you get the error message 'Username/Password
      do not match. If they do match you are successfully logged in.
      */
-    @IBAction func loginButtonPushed(_ sender: Any)
+    public func login()
     {
         // Initalize data members
         let userEmail = userEmailTextField.text!
