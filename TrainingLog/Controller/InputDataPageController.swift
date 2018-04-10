@@ -47,6 +47,9 @@ public class InputDataPageController: UIViewController
         {
             // Display alert message "Valid number required"
             displayMyAlertMessage(userMessage: "Valid number required")
+            
+            // Set the textField to empty
+            distanceTextField.text! = ""
         }
         
         // Set the textField to the new number
@@ -76,6 +79,9 @@ public class InputDataPageController: UIViewController
         {
             // Display alert message "Valid number required"
             displayMyAlertMessage(userMessage: "Valid number required")
+            
+            // Set the textField to empty
+            distanceTextField.text! = ""
         }
         
         // Set the textField to the new number
@@ -94,6 +100,7 @@ public class InputDataPageController: UIViewController
         
         // Calculate the pace
         // Help from StackOverflow
+        // If the textfields are empty
         if (minutes.isEmpty || seconds.isEmpty || distance.isEmpty)
         {
             // Display an error message
@@ -101,7 +108,8 @@ public class InputDataPageController: UIViewController
             
             return;
         }
-        else
+            // If the values are valid
+        else if let check = (Double(minutes + seconds))
         {            
             // Initalize data members
             let paceMinutes = paceCalculator(minutes: (minutes as NSString).doubleValue, seconds: (seconds as NSString).doubleValue, distance: (distance as NSString).doubleValue) / 60
@@ -113,6 +121,17 @@ public class InputDataPageController: UIViewController
             
             // Set the paceTextField with the pace
             paceTextField.text = "\(intPaceMinutes):\(paceSecondsZero)"
+        }
+            // If the values are not valid
+        else
+        {
+            // Display alert message "Valid number required"
+            displayMyAlertMessage(userMessage: "Valid number required")
+            
+            // Set textFields to empty
+            secTextField.text! = ""
+            minTextField.text! = ""
+            distanceTextField.text! = ""
         }
     }
     
@@ -161,6 +180,8 @@ public class InputDataPageController: UIViewController
                 
                 // Close the file
                 fileHandle.closeFile()
+                
+                print(filePath)
             }
                 // If the file won't open
             else

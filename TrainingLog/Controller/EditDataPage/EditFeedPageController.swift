@@ -23,15 +23,16 @@ public class EditFeedPageController: UITableViewController
     {
         // Initalize data members
         var items = [RunData]()
-        
         let filePath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]).appendingPathComponent("data.csv")
         
+        // Grab the contents of the file
         if let input = try? String(contentsOf: filePath)
         {
             // Seperate each workout
             let dataLines = input.components(separatedBy: "\n")
             for line in dataLines
             {
+                // If the line count is greater that 2
                 if(line.count > 2)
                 {
                     // Seperate each element of the workout

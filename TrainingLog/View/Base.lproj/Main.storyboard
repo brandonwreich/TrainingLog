@@ -510,9 +510,6 @@
                                             <state key="normal" title="Delete">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <connections>
-                                                <action selector="deleteRun:" destination="V9S-US-yHI" eventType="touchUpInside" id="mCK-K0-6sX"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-ur-GfK">
                                             <rect key="frame" x="0.0" y="90" width="375" height="21"/>
@@ -717,7 +714,6 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g9I-hL-35V"/>
         <segue reference="AjP-Vd-DfC"/>
         <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>

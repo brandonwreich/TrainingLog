@@ -21,7 +21,7 @@ public class RegisterPageController: UIViewController
      the new user.
      */
     //startAbstraction
-    //startAlgorithm
+    //startComplexity
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         checkIfFieldsAreEmpty()
@@ -56,7 +56,7 @@ public class RegisterPageController: UIViewController
     }
     
     //endAbstraction
-    //endAlgorithm
+    //endComplexity
     
     /**
      This method checks to see if the user inputed a valid email. It checks for a '@' and makes sure
@@ -82,7 +82,7 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the email contains any illegal characters
-            //startAlgorithm
+            //startComplexity
         else if (userEmail.index(of: "<") != nil ||
             userEmail.index(of: ">") != nil ||
             userEmail.index(of: "(") != nil ||
@@ -102,9 +102,9 @@ public class RegisterPageController: UIViewController
             
             return;
         }
-            //endAlgorithm
+            //endComplxity
             
-            //startAlgorithm
+            //startComplexity
             // If the email starts with a number, hyphen, period, or underscore
         else if (userEmail.hasPrefix("_") ||
             userEmail.hasPrefix(".") ||
@@ -129,7 +129,7 @@ public class RegisterPageController: UIViewController
             
             return;
         }
-        //endAlgorithm
+        //endComplexity
     }
     
     /**
@@ -179,7 +179,7 @@ public class RegisterPageController: UIViewController
             return;
         }
             // If the password does NOT contain a number
-            //startAlgorithm
+            //startComplexity
         else if(userPassword.index(of: "0") == nil &&
             userPassword.index(of: "1") == nil &&
             userPassword.index(of: "2") == nil &&
@@ -200,7 +200,7 @@ public class RegisterPageController: UIViewController
             
             return;
         }
-        //endAlgorithm
+        //endComplexity
     }
     
     /**
