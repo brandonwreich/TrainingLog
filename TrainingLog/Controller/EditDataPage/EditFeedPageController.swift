@@ -56,7 +56,7 @@ public class EditFeedPageController: UITableViewController
         var numOfSection: NSInteger = 0
         
         // If there is data in the list
-        if (runList.count > 0)
+        if(runList.count > 0)
         {
             // Set the number of sections to 1
             self.tableView.backgroundView = nil

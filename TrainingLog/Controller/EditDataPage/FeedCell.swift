@@ -32,7 +32,7 @@ class FeedCell: UITableViewCell
     private func updateCellView()
     {
         // If there is data in runData
-        if (runData != nil)
+        if(runData != nil)
         {
             // Set the name and date labels to the name and date
             nameLabel.text = runData.runName

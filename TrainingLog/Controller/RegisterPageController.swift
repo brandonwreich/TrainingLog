@@ -44,7 +44,7 @@ public class RegisterPageController: UIViewController
         let userConfirmPassword = userConfirmPasswordTextField.text!
         
         // If any of the fields are empty
-        if (userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
+        if(userEmail.isEmpty || userPassword.isEmpty || userConfirmPassword.isEmpty)
         {
             // Display the alert message "All fields are required"
             displayMyAlertMessage(userMessage: "All fields are required to register")
@@ -70,7 +70,7 @@ public class RegisterPageController: UIViewController
         let userEmail =  userEmailTextField.text!
         
         // If the email contains a '@'
-        if (userEmail.index(of: "@") == nil)
+        if(userEmail.index(of: "@") == nil)
         {
             // Display alert message "Valid email required"
             displayMyAlertMessage(userMessage: "Vaild email required")
@@ -83,7 +83,7 @@ public class RegisterPageController: UIViewController
         }
             // If the email contains any illegal characters
             //startComplexity
-        else if (userEmail.index(of: "<") != nil ||
+        else if(userEmail.index(of: "<") != nil ||
             userEmail.index(of: ">") != nil ||
             userEmail.index(of: "(") != nil ||
             userEmail.index(of: ")") != nil ||
@@ -106,7 +106,7 @@ public class RegisterPageController: UIViewController
             
             //startComplexity
             // If the email starts with a number, hyphen, period, or underscore
-        else if (userEmail.hasPrefix("_") ||
+        else if(userEmail.hasPrefix("_") ||
             userEmail.hasPrefix(".") ||
             userEmail.hasPrefix("-") ||
             userEmail.hasPrefix("1") ||
@@ -167,7 +167,7 @@ public class RegisterPageController: UIViewController
         let userPassword = userPasswordTextField.text!
         
         // If the password is too short or too long
-        if (userPassword.count < 5 || userPassword.count > 20)
+        if(userPassword.count < 5 || userPassword.count > 20)
         {
             // Display alter message 'Password is too short'
             displayMyAlertMessage(userMessage: "Passwords must be 6-20 characters long")
@@ -214,7 +214,7 @@ public class RegisterPageController: UIViewController
         let userConfirmPassword = userConfirmPasswordTextField.text!
         
         // If the userPassword does not match the userConfirmPassword
-        if (userPassword != userConfirmPassword)
+        if(userPassword != userConfirmPassword)
         {
             // Display the alert message
             displayMyAlertMessage(userMessage: "Passwords do not match")

@@ -37,10 +37,10 @@ public class LoginPageController: UIViewController
         let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword")
         
         // If email matches
-        if (userEmailStored == userEmail) || userEmail == "123"
+        if(userEmailStored == userEmail) || userEmail == "123"
         {
             // If password matches
-            if (userPasswordStored == userPassword) || userPassword == "123"
+            if(userPasswordStored == userPassword) || userPassword == "123"
             {
                 // Login is succesful
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
