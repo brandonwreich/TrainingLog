@@ -101,7 +101,7 @@ public class InputDataPageController: UIViewController
         // Calculate the pace
         // Help from StackOverflow
         // If the textfields are empty
-        if (minutes.isEmpty || seconds.isEmpty || distance.isEmpty)
+        if(minutes.isEmpty || seconds.isEmpty || distance.isEmpty)
         {
             // Display an error message
             displayMyAlertMessage(userMessage: "You must enter data into the distance and time fields")
@@ -163,41 +163,52 @@ public class InputDataPageController: UIViewController
         let csvText = "\(name), \(distance), \(finalTime), \(pace), \(date), \(description) \n"
         let data =  csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
-        // If the file exists
-        if FileManager.default.fileExists(atPath: filePath.path)
+        // If required fields are empty
+        if(name.isEmpty || distance.isEmpty || date.isEmpty)
         {
-            // Initalize data members
-            var error : NSError?
+            displayMyAlertMessage(userMessage: "You must fill the required fields")
             
-            // Try to write to open the file
-            if let fileHandle = try? FileHandle(forWritingTo: filePath)
-            {
-                // Find the end of the file
-                fileHandle.seekToEndOfFile()
-                
-                // Write the data
-                fileHandle.write(data)
-                
-                // Close the file
-                fileHandle.closeFile()
-                
-                print(filePath)
-            }
-                // If the file won't open
-            else
-            {
-                // Display error message
-                displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
-            }
+            return;
         }
-            // If you can't write
+            // If the fields are full
         else
         {
-            // Initalize data members
-            var error : NSError?
-            
-            // Display error message
-            displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
+            // If the file exists
+            if FileManager.default.fileExists(atPath: filePath.path)
+            {
+                // Initalize data members
+                var error : NSError?
+                
+                // Try to write to open the file
+                if let fileHandle = try? FileHandle(forWritingTo: filePath)
+                {
+                    // Find the end of the file
+                    fileHandle.seekToEndOfFile()
+                    
+                    // Write the data
+                    fileHandle.write(data)
+                    
+                    // Close the file
+                    fileHandle.closeFile()
+                    
+                    print(filePath)
+                }
+                    // If the file won't open
+                else
+                {
+                    // Display error message
+                    displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
+                }
+            }
+                // If you can't write
+            else
+            {
+                // Initalize data members
+                var error : NSError?
+                
+                // Display error message
+                displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
+            }
         }
     }
     
