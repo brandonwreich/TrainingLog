@@ -16,6 +16,7 @@ class FeedCell: UITableViewCell
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
+    // Initalize data members
     var runData : RunData!
     {
         didSet
