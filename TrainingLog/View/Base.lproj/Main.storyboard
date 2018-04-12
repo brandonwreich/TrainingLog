@@ -493,9 +493,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpM-Oc-aZp">
-                                            <rect key="frame" x="147" y="67" width="80" height="21"/>
+                                            <rect key="frame" x="147" y="67" width="101" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="pQY-h1-3Df"/>
+                                                <constraint firstAttribute="width" constant="101" id="0j5-aq-ltj"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -526,13 +526,13 @@
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="DPm-kX-Gwm"/>
                                         <constraint firstItem="vpM-Oc-aZp" firstAttribute="top" secondItem="9d9-5L-bF0" secondAttribute="bottom" constant="26" id="McY-VD-Co4"/>
                                         <constraint firstItem="3X2-Hb-bDP" firstAttribute="leading" secondItem="XHZ-xV-NRB" secondAttribute="leadingMargin" constant="18" id="NrW-ka-xFI"/>
-                                        <constraint firstItem="CFI-EJ-PhR" firstAttribute="leading" secondItem="vpM-Oc-aZp" secondAttribute="trailing" constant="29" id="PSF-xl-1LU"/>
                                         <constraint firstAttribute="bottom" secondItem="3bF-ur-GfK" secondAttribute="bottom" constant="0.5" id="YDy-JM-hR4"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3X2-Hb-bDP" secondAttribute="bottom" constant="15.5" id="eeI-up-MFm"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="CFI-EJ-PhR" secondAttribute="trailing" constant="11" id="rpZ-xM-FyZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="CFI-EJ-PhR" secondAttribute="bottom" constant="33.5" id="rsh-6n-sJA"/>
                                         <constraint firstAttribute="trailing" secondItem="3bF-ur-GfK" secondAttribute="trailing" id="tFW-Fc-ngX"/>
                                         <constraint firstItem="9d9-5L-bF0" firstAttribute="top" secondItem="XHZ-xV-NRB" secondAttribute="topMargin" constant="12" id="vbE-R1-8ES"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vpM-Oc-aZp" secondAttribute="trailing" constant="119" id="yOj-sX-w3N"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -714,6 +714,7 @@
         <image name="RunnerSelf" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xRP-0e-PCp"/>
         <segue reference="1kl-rE-aiE"/>
         <segue reference="1kM-ii-ygj"/>
     </inferredMetricsTieBreakers>

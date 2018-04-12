@@ -163,52 +163,41 @@ public class InputDataPageController: UIViewController
         let csvText = "\(name), \(distance), \(finalTime), \(pace), \(date), \(description) \n"
         let data =  csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
-        // If required fields are empty
-        if(name.isEmpty || distance.isEmpty || date.isEmpty)
+        // If the file exists
+        if FileManager.default.fileExists(atPath: filePath.path)
         {
-            displayMyAlertMessage(userMessage: "You must fill the required fields")
+            // Initalize data members
+            var error : NSError?
             
-            return;
-        }
-            // If the fields are full
-        else
-        {
-            // If the file exists
-            if FileManager.default.fileExists(atPath: filePath.path)
+            // Try to write to open the file
+            if let fileHandle = try? FileHandle(forWritingTo: filePath)
             {
-                // Initalize data members
-                var error : NSError?
+                // Find the end of the file
+                fileHandle.seekToEndOfFile()
                 
-                // Try to write to open the file
-                if let fileHandle = try? FileHandle(forWritingTo: filePath)
-                {
-                    // Find the end of the file
-                    fileHandle.seekToEndOfFile()
-                    
-                    // Write the data
-                    fileHandle.write(data)
-                    
-                    // Close the file
-                    fileHandle.closeFile()
-                    
-                    print(filePath)
-                }
-                    // If the file won't open
-                else
-                {
-                    // Display error message
-                    displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
-                }
+                // Write the data
+                fileHandle.write(data)
+                
+                // Close the file
+                fileHandle.closeFile()
+                
+                print(filePath)
             }
-                // If you can't write
+                // If the file won't open
             else
             {
-                // Initalize data members
-                var error : NSError?
-                
                 // Display error message
-                displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
+                displayMyAlertMessage(userMessage: "Can't open fileHandle \(String(describing: error))")
             }
+        }
+            // If you can't write
+        else
+        {
+            // Initalize data members
+            var error : NSError?
+            
+            // Display error message
+            displayMyAlertMessage(userMessage: "Can't Write \(String(describing: error))")
         }
     }
     

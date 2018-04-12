@@ -36,7 +36,7 @@ public class EditFeedPageController: UITableViewController
                 if(line.count > 2)
                 {
                     // Seperate each element of the workout
-                    let item = line.components(separatedBy: ", ")
+                    let item = line.components(separatedBy: ",")
                     items.append(RunData(name: item[0], distance: item[1], date: item[4]))
                 }
             }
