@@ -21,12 +21,10 @@ public class RegisterPageController: UIViewController
      the new user.
      */
     //startAbstraction
-    //startComplexity
     @IBAction func registerButtonClicked(_ sender: Any)
     {
         checkIfFieldsAreEmpty()
         checkIfUsedValidEmail()
-        checkIfEmailAlreadyExists()
         checkIfUsedValidPassword()
         checkIfPasswordEqualsConfirmPassword()
         storeData()
@@ -54,9 +52,7 @@ public class RegisterPageController: UIViewController
             return;
         }
     }
-    
     //endAbstraction
-    //endComplexity
     
     /**
      This method checks to see if the user inputed a valid email. It checks for a '@' and makes sure
@@ -102,7 +98,7 @@ public class RegisterPageController: UIViewController
             
             return;
         }
-            //endComplxity
+            //endComplexity
             
             //startComplexity
             // If the email starts with a number, hyphen, period, or underscore
@@ -130,30 +126,6 @@ public class RegisterPageController: UIViewController
             return;
         }
         //endComplexity
-    }
-    
-    /**
-     This method checks to see if the email already exsits in the system. Returns an error message
-     if there are any problems.
-     */
-    public func checkIfEmailAlreadyExists()
-    {
-        // Initalize data members
-        let userEmail =  userEmailTextField.text!
-        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
-        
-        // Check to see if this email alread exsists
-        if(userEmailStored == userEmail)
-        {
-            // Display alert message 'Email already exsits'
-            displayMyAlertMessage(userMessage: "This email already exists")
-            
-            // Set the password fields to empty
-            userPasswordTextField.text = ""
-            userConfirmPasswordTextField.text = ""
-            
-            return;
-        }
     }
     
     /**
@@ -256,7 +228,7 @@ public class RegisterPageController: UIViewController
             self.dismiss(animated: true, completion: nil)
         }
         
-        // Add the action to the alert and present it
+        // Add the action to the alert and present it and dismiss the view
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }

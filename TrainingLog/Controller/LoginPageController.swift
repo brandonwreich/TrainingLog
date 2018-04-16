@@ -24,9 +24,9 @@ public class LoginPageController: UIViewController
     }
     
     /**
-     This method checks to see if your email and password match
-     the ones that are stored using UserDefaults. If not you get the error message 'Username/Password
-     do not match. If they do match you are successfully logged in.
+     This method checks to see if your email and password match the ones that are stored
+     using UserDefaults. If not you get the error message 'Username/Password do not match.
+     If they do match you are successfully logged in.
      */
     public func login()
     {
